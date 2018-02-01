@@ -6,7 +6,6 @@
 
 @import SpotX;
 
-@interface MainViewController : UIViewController
+@interface InterstitialViewController : UIViewController <SpotXAdDelegate>
 @end
-
 

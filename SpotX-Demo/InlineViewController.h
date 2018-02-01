@@ -6,7 +6,7 @@
 
 @import SpotX;
 
-@interface MainViewController : UIViewController
+@interface InlineViewController : UIViewController <SpotXAdDelegate>
 @end
 
 

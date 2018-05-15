@@ -3,112 +3,194 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		63FDB00FA88FE4FF35A86617 /* libPods-SpotX-Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F446CA8A44E48EEAF0438AB6 /* libPods-SpotX-Demo.a */; };
-		6B4447121D2D647D00278A56 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4447111D2D647D00278A56 /* main.m */; };
-		6B4447151D2D647D00278A56 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4447141D2D647D00278A56 /* AppDelegate.m */; };
-		6B4447181D2D647D00278A56 /* InterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4447171D2D647D00278A56 /* InterstitialViewController.m */; };
-		6B44471D1D2D647D00278A56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B44471C1D2D647D00278A56 /* Assets.xcassets */; };
-		6B4447201D2D647D00278A56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B44471E1D2D647D00278A56 /* LaunchScreen.storyboard */; };
-		D0B1EE2120223A790067C5E9 /* InlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B1EE2020223A790067C5E9 /* InlineViewController.m */; };
-		D0BB9369202240C00054D654 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BB9368202240C00054D654 /* MainViewController.m */; };
-		D0BB936F2022431F0054D654 /* MainViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0BB936B2022431F0054D654 /* MainViewController.storyboard */; };
+		0E804E9920600DCA00C6D9D9 /* BrightcovePlayerController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E804E9720600DCA00C6D9D9 /* BrightcovePlayerController.storyboard */; };
+		0EC1A81F2056DFAA0033674A /* BrightcovePlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC1A81D2056DFAA0033674A /* BrightcovePlayerController.m */; };
+		0EC1A82F205976E10033674A /* SettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EC1A82D205976E10033674A /* SettingsViewController.storyboard */; };
+		0EC1A833205988070033674A /* BrightcoveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC1A831205988070033674A /* BrightcoveViewController.m */; };
+		0ED15D4F1FE304B500246AED /* MoPubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED15D4D1FE304B500246AED /* MoPubViewController.m */; };
+		0EEFAF631FFD7F96003D1545 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEFAF611FFD7F96003D1545 /* SettingsViewController.m */; };
+		0EEFAF671FFE8922003D1545 /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEFAF641FFE8922003D1545 /* Preferences.m */; };
+		5E3D2A64A1B80053F7FA13AB /* libPods-SpotX-Demo-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 320468681C575F925739EFE5 /* libPods-SpotX-Demo-iOS.a */; };
+		7BA742611FA916E60063430A /* InlinePlaybackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F553E71F2A5BBB0042AC23 /* InlinePlaybackViewController.m */; };
+		7BA742641FA916E60063430A /* SDKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCDE0881DC3A3A10021D0F7 /* SDKViewController.m */; };
+		7BA742651FA916E60063430A /* ResizablePlaybackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D03C25EC1F9E81A6001AD0A7 /* ResizablePlaybackViewController.m */; };
+		7BA742661FA916E60063430A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCDE0851DC3A3A10021D0F7 /* AppDelegate.m */; };
+		7BA742671FA916E60063430A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCDE0821DC3A3A10021D0F7 /* main.m */; };
+		7BA742691FA916E60063430A /* SPOTXMoatMobileAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BA742551FA8DB950063430A /* SPOTXMoatMobileAppKit.framework */; };
+		7BA7426A1FA916E60063430A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B8B52E11DC3AF1E00EA0AA7 /* UIKit.framework */; };
+		7BA7426E1FA916E60063430A /* ResizablePlaybackViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D03C25E81F9E8070001AD0A7 /* ResizablePlaybackViewController.storyboard */; };
+		7BA7426F1FA916E60063430A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B4DB96B1DD241B600D55FB8 /* Assets.xcassets */; };
+		7BA742701FA916E60063430A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B4DB96C1DD241B600D55FB8 /* LaunchScreen.storyboard */; };
+		7BA742711FA916E60063430A /* InlinePlaybackViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44F553E91F2A63B40042AC23 /* InlinePlaybackViewController.storyboard */; };
+		7BA742731FA916E60063430A /* MainViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B4DB96D1DD241B600D55FB8 /* MainViewController.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		7BA742761FA916E60063430A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		10023A23582A9F647F7150E4 /* Pods-SpotX-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpotX-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpotX-Demo/Pods-SpotX-Demo.release.xcconfig"; sourceTree = "<group>"; };
-		6B44470D1D2D647D00278A56 /* SpotX-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpotX-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6B4447111D2D647D00278A56 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6B4447131D2D647D00278A56 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		6B4447141D2D647D00278A56 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6B4447161D2D647D00278A56 /* InterstitialViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterstitialViewController.h; sourceTree = "<group>"; };
-		6B4447171D2D647D00278A56 /* InterstitialViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterstitialViewController.m; sourceTree = "<group>"; };
-		6B44471C1D2D647D00278A56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6B44471F1D2D647D00278A56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		6B4447211D2D647D00278A56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D0B1EE2020223A790067C5E9 /* InlineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InlineViewController.m; sourceTree = "<group>"; };
-		D0B1EE2220223A8C0067C5E9 /* InlineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InlineViewController.h; sourceTree = "<group>"; };
-		D0BB9368202240C00054D654 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		D0BB936A202240CD0054D654 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		D0BB936C2022431F0054D654 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainViewController.storyboard; sourceTree = "<group>"; };
-		D2B8F0A75BAE13E266C7E1A0 /* Pods-SpotX-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpotX-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpotX-Demo/Pods-SpotX-Demo.debug.xcconfig"; sourceTree = "<group>"; };
-		F446CA8A44E48EEAF0438AB6 /* libPods-SpotX-Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SpotX-Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C3CB13D23362848B01BE0A8 /* Pods-SpotX-Demo-iOS.test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpotX-Demo-iOS.test.xcconfig"; path = "Pods/Target Support Files/Pods-SpotX-Demo-iOS/Pods-SpotX-Demo-iOS.test.xcconfig"; sourceTree = "<group>"; };
+		0E804E9720600DCA00C6D9D9 /* BrightcovePlayerController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BrightcovePlayerController.storyboard; sourceTree = "<group>"; };
+		0EC1A81C2056DFAA0033674A /* BrightcovePlayerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrightcovePlayerController.h; sourceTree = "<group>"; };
+		0EC1A81D2056DFAA0033674A /* BrightcovePlayerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrightcovePlayerController.m; sourceTree = "<group>"; };
+		0EC1A82D205976E10033674A /* SettingsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SettingsViewController.storyboard; sourceTree = "<group>"; };
+		0EC1A830205988070033674A /* BrightcoveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BrightcoveViewController.h; path = Classes/BrightcoveViewController.h; sourceTree = SOURCE_ROOT; };
+		0EC1A831205988070033674A /* BrightcoveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BrightcoveViewController.m; path = Classes/BrightcoveViewController.m; sourceTree = SOURCE_ROOT; };
+		0EC8AF0B203C97E40047E249 /* SpotX-MoPub-Plugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = "SpotX-MoPub-Plugin.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EC8AF0D203C97EA0047E249 /* SpotX-MoPub-Plugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = "SpotX-MoPub-Plugin.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0ED15D4C1FE304B500246AED /* MoPubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoPubViewController.h; sourceTree = "<group>"; };
+		0ED15D4D1FE304B500246AED /* MoPubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoPubViewController.m; sourceTree = "<group>"; };
+		0EEFAF601FFD7F96003D1545 /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SettingsViewController.h; path = Classes/SettingsViewController.h; sourceTree = SOURCE_ROOT; };
+		0EEFAF611FFD7F96003D1545 /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SettingsViewController.m; path = Classes/SettingsViewController.m; sourceTree = SOURCE_ROOT; };
+		0EEFAF641FFE8922003D1545 /* Preferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Preferences.m; sourceTree = "<group>"; };
+		0EEFAF651FFE8922003D1545 /* Preferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Preferences.h; sourceTree = "<group>"; };
+		25D83E931E4A4C0C00733F0B /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.2.sdk/System/Library/Frameworks/SafariServices.framework; sourceTree = DEVELOPER_DIR; };
+		320468681C575F925739EFE5 /* libPods-SpotX-Demo-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SpotX-Demo-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		44F553E61F2A5BBB0042AC23 /* InlinePlaybackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InlinePlaybackViewController.h; sourceTree = "<group>"; };
+		44F553E71F2A5BBB0042AC23 /* InlinePlaybackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InlinePlaybackViewController.m; sourceTree = "<group>"; };
+		44F553E91F2A63B40042AC23 /* InlinePlaybackViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InlinePlaybackViewController.storyboard; sourceTree = "<group>"; };
+		6B4DB9691DD2410E00D55FB8 /* Info-iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = SOURCE_ROOT; };
+		6B4DB96B1DD241B600D55FB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6B4DB96C1DD241B600D55FB8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6B4DB96D1DD241B600D55FB8 /* MainViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainViewController.storyboard; sourceTree = "<group>"; };
+		6B7B65171DC3BDC400C81610 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		6B7B651A1DC3BDD100C81610 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6B8B52E11DC3AF1E00EA0AA7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		6BA381931D2686BC008A315E /* TVMLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TVMLKit.framework; path = System/Library/Frameworks/TVMLKit.framework; sourceTree = SDKROOT; };
+		6BCDE0511DC39E200021D0F7 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/AVKit.framework; sourceTree = DEVELOPER_DIR; };
+		6BCDE0821DC3A3A10021D0F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = SOURCE_ROOT; };
+		6BCDE0841DC3A3A10021D0F7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6BCDE0851DC3A3A10021D0F7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6BCDE0871DC3A3A10021D0F7 /* SDKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDKViewController.h; sourceTree = "<group>"; };
+		6BCDE0881DC3A3A10021D0F7 /* SDKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDKViewController.m; sourceTree = "<group>"; };
+		7B2CFAFF1FAA2D0B0017AB6A /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.0.sdk/System/Library/Frameworks/AdSupport.framework; sourceTree = DEVELOPER_DIR; };
+		7B2CFB011FAA2D100017AB6A /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		7B6572A01E859FB8001D17C1 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.2.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
+		7BA742551FA8DB950063430A /* SPOTXMoatMobileAppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SPOTXMoatMobileAppKit.framework; path = Frameworks/SPOTXMoatMobileAppKit.framework; sourceTree = "<group>"; };
+		7BA742571FA8DB9A0063430A /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.0.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
+		7BA7427C1FA916E60063430A /* SpotX-Demo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpotX-Demo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81350D82DC57A87E1FD7FCB0 /* Pods-SpotX-Demo-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpotX-Demo-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpotX-Demo-iOS/Pods-SpotX-Demo-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		AC4529431376BDF68A155936 /* Pods-SpotX-Demo-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpotX-Demo-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpotX-Demo-iOS/Pods-SpotX-Demo-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		D03C25E81F9E8070001AD0A7 /* ResizablePlaybackViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ResizablePlaybackViewController.storyboard; sourceTree = "<group>"; };
+		D03C25EB1F9E81A6001AD0A7 /* ResizablePlaybackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResizablePlaybackViewController.h; sourceTree = "<group>"; };
+		D03C25EC1F9E81A6001AD0A7 /* ResizablePlaybackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResizablePlaybackViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		6B44470A1D2D647D00278A56 /* Frameworks */ = {
+		7BA742681FA916E60063430A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63FDB00FA88FE4FF35A86617 /* libPods-SpotX-Demo.a in Frameworks */,
+				7BA742691FA916E60063430A /* SPOTXMoatMobileAppKit.framework in Frameworks */,
+				7BA7426A1FA916E60063430A /* UIKit.framework in Frameworks */,
+				5E3D2A64A1B80053F7FA13AB /* libPods-SpotX-Demo-iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6B4447041D2D647D00278A56 = {
+		6B4DB9651DD2409200D55FB8 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				6B44470F1D2D647D00278A56 /* SpotX-Demo */,
-				6B44470E1D2D647D00278A56 /* Products */,
-				C066D5D0695341D2BDD9141C /* Pods */,
-				9F8E51A8B6C6D2728DC35FB1 /* Frameworks */,
+				6B4DB96B1DD241B600D55FB8 /* Assets.xcassets */,
+				0E804E9720600DCA00C6D9D9 /* BrightcovePlayerController.storyboard */,
+				44F553E91F2A63B40042AC23 /* InlinePlaybackViewController.storyboard */,
+				6B4DB96C1DD241B600D55FB8 /* LaunchScreen.storyboard */,
+				6B4DB96D1DD241B600D55FB8 /* MainViewController.storyboard */,
+				D03C25E81F9E8070001AD0A7 /* ResizablePlaybackViewController.storyboard */,
+				0EC1A82D205976E10033674A /* SettingsViewController.storyboard */,
+			);
+			path = Assets;
+			sourceTree = SOURCE_ROOT;
+		};
+		6B7B650F1DC3BC4A00C81610 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				6BCDE0841DC3A3A10021D0F7 /* AppDelegate.h */,
+				6BCDE0851DC3A3A10021D0F7 /* AppDelegate.m */,
+				0EC1A81C2056DFAA0033674A /* BrightcovePlayerController.h */,
+				0EC1A81D2056DFAA0033674A /* BrightcovePlayerController.m */,
+				0EC1A830205988070033674A /* BrightcoveViewController.h */,
+				0EC1A831205988070033674A /* BrightcoveViewController.m */,
+				44F553E61F2A5BBB0042AC23 /* InlinePlaybackViewController.h */,
+				44F553E71F2A5BBB0042AC23 /* InlinePlaybackViewController.m */,
+				0ED15D4C1FE304B500246AED /* MoPubViewController.h */,
+				0ED15D4D1FE304B500246AED /* MoPubViewController.m */,
+				0EEFAF651FFE8922003D1545 /* Preferences.h */,
+				0EEFAF641FFE8922003D1545 /* Preferences.m */,
+				D03C25EB1F9E81A6001AD0A7 /* ResizablePlaybackViewController.h */,
+				D03C25EC1F9E81A6001AD0A7 /* ResizablePlaybackViewController.m */,
+				6BCDE0871DC3A3A10021D0F7 /* SDKViewController.h */,
+				6BCDE0881DC3A3A10021D0F7 /* SDKViewController.m */,
+				0EEFAF601FFD7F96003D1545 /* SettingsViewController.h */,
+				0EEFAF611FFD7F96003D1545 /* SettingsViewController.m */,
+			);
+			path = Classes;
+			sourceTree = SOURCE_ROOT;
+		};
+		6B9FE09B1C93109F009C8BF0 = {
+			isa = PBXGroup;
+			children = (
+				6B4DB9651DD2409200D55FB8 /* Assets */,
+				6B7B650F1DC3BC4A00C81610 /* Classes */,
+				6B4DB9691DD2410E00D55FB8 /* Info-iOS.plist */,
+				6BCDE0821DC3A3A10021D0F7 /* main.m */,
+				6B9FE0A61C93109F009C8BF0 /* Products */,
+				6BCDE0501DC39E200021D0F7 /* Frameworks */,
+				C27E9FA9278C44210A8EDC80 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
-		6B44470E1D2D647D00278A56 /* Products */ = {
+		6B9FE0A61C93109F009C8BF0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6B44470D1D2D647D00278A56 /* SpotX-Demo.app */,
+				7BA7427C1FA916E60063430A /* SpotX-Demo-iOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6B44470F1D2D647D00278A56 /* SpotX-Demo */ = {
+		6BCDE0501DC39E200021D0F7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6B4447131D2D647D00278A56 /* AppDelegate.h */,
-				D0B1EE2220223A8C0067C5E9 /* InlineViewController.h */,
-				6B4447161D2D647D00278A56 /* InterstitialViewController.h */,
-				D0BB936A202240CD0054D654 /* MainViewController.h */,
-				6B4447141D2D647D00278A56 /* AppDelegate.m */,
-				D0B1EE2020223A790067C5E9 /* InlineViewController.m */,
-				6B4447171D2D647D00278A56 /* InterstitialViewController.m */,
-				D0BB9368202240C00054D654 /* MainViewController.m */,
-				6B4447211D2D647D00278A56 /* Info.plist */,
-				6B44471C1D2D647D00278A56 /* Assets.xcassets */,
-				D0BB936B2022431F0054D654 /* MainViewController.storyboard */,
-				6B44471E1D2D647D00278A56 /* LaunchScreen.storyboard */,
-				6B4447101D2D647D00278A56 /* Supporting Files */,
-			);
-			path = "SpotX-Demo";
-			sourceTree = "<group>";
-		};
-		6B4447101D2D647D00278A56 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				6B4447111D2D647D00278A56 /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		9F8E51A8B6C6D2728DC35FB1 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F446CA8A44E48EEAF0438AB6 /* libPods-SpotX-Demo.a */,
+				0EC8AF0D203C97EA0047E249 /* SpotX-MoPub-Plugin.framework */,
+				0EC8AF0B203C97E40047E249 /* SpotX-MoPub-Plugin.framework */,
+				7B2CFAFF1FAA2D0B0017AB6A /* AdSupport.framework */,
+				7B2CFB011FAA2D100017AB6A /* AdSupport.framework */,
+				7BA742571FA8DB9A0063430A /* WebKit.framework */,
+				7BA742551FA8DB950063430A /* SPOTXMoatMobileAppKit.framework */,
+				7B6572A01E859FB8001D17C1 /* CoreTelephony.framework */,
+				25D83E931E4A4C0C00733F0B /* SafariServices.framework */,
+				6B7B651A1DC3BDD100C81610 /* UIKit.framework */,
+				6B7B65171DC3BDC400C81610 /* AVKit.framework */,
+				6B8B52E11DC3AF1E00EA0AA7 /* UIKit.framework */,
+				6BCDE0511DC39E200021D0F7 /* AVKit.framework */,
+				6BA381931D2686BC008A315E /* TVMLKit.framework */,
+				320468681C575F925739EFE5 /* libPods-SpotX-Demo-iOS.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C066D5D0695341D2BDD9141C /* Pods */ = {
+		C27E9FA9278C44210A8EDC80 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D2B8F0A75BAE13E266C7E1A0 /* Pods-SpotX-Demo.debug.xcconfig */,
-				10023A23582A9F647F7150E4 /* Pods-SpotX-Demo.release.xcconfig */,
+				81350D82DC57A87E1FD7FCB0 /* Pods-SpotX-Demo-iOS.debug.xcconfig */,
+				0C3CB13D23362848B01BE0A8 /* Pods-SpotX-Demo-iOS.test.xcconfig */,
+				AC4529431376BDF68A155936 /* Pods-SpotX-Demo-iOS.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -116,106 +198,79 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6B44470C1D2D647D00278A56 /* SpotX-Demo */ = {
+		7BA7425D1FA916E60063430A /* SpotX-Demo-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6B4447241D2D647D00278A56 /* Build configuration list for PBXNativeTarget "SpotX-Demo" */;
+			buildConfigurationList = 7BA742781FA916E60063430A /* Build configuration list for PBXNativeTarget "SpotX-Demo-iOS" */;
 			buildPhases = (
-				D525E7BA37F611B7E23ACBA6 /* [CP] Check Pods Manifest.lock */,
-				6B4447091D2D647D00278A56 /* Sources */,
-				6B44470A1D2D647D00278A56 /* Frameworks */,
-				6B44470B1D2D647D00278A56 /* Resources */,
-				94383D5F857B1D90E4719B1C /* [CP] Embed Pods Frameworks */,
-				BE77837FDC4B7FDC8B1DB989 /* [CP] Copy Pods Resources */,
+				8192D588F8999280B9FAB5DB /* [CP] Check Pods Manifest.lock */,
+				7BA742601FA916E60063430A /* Sources */,
+				7BA742681FA916E60063430A /* Frameworks */,
+				7BA7426C1FA916E60063430A /* Resources */,
+				7BA742761FA916E60063430A /* Embed Frameworks */,
+				D8F2C66E337150DA364D41D6 /* [CP] Embed Pods Frameworks */,
+				A01FFADEF663916C2A28E30D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "SpotX-Demo";
-			productName = "SpotX-Demo";
-			productReference = 6B44470D1D2D647D00278A56 /* SpotX-Demo.app */;
+			name = "SpotX-Demo-iOS";
+			productName = "Test-iOS";
+			productReference = 7BA7427C1FA916E60063430A /* SpotX-Demo-iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		6B4447051D2D647D00278A56 /* Project object */ = {
+		6B9FE09C1C93109F009C8BF0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "SpotX, Inc";
 				TargetAttributes = {
-					6B44470C1D2D647D00278A56 = {
-						CreatedOnToolsVersion = 7.3.1;
+					7BA7425D1FA916E60063430A = {
+						DevelopmentTeam = M4T49QG5CY;
 					};
 				};
 			};
-			buildConfigurationList = 6B4447081D2D647D00278A56 /* Build configuration list for PBXProject "SpotX-Demo" */;
-			compatibilityVersion = "Xcode 3.2";
+			buildConfigurationList = 6B9FE09F1C93109F009C8BF0 /* Build configuration list for PBXProject "SpotX-Demo" */;
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 6B4447041D2D647D00278A56;
-			productRefGroup = 6B44470E1D2D647D00278A56 /* Products */;
+			mainGroup = 6B9FE09B1C93109F009C8BF0;
+			productRefGroup = 6B9FE0A61C93109F009C8BF0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6B44470C1D2D647D00278A56 /* SpotX-Demo */,
+				7BA7425D1FA916E60063430A /* SpotX-Demo-iOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		6B44470B1D2D647D00278A56 /* Resources */ = {
+		7BA7426C1FA916E60063430A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0BB936F2022431F0054D654 /* MainViewController.storyboard in Resources */,
-				6B4447201D2D647D00278A56 /* LaunchScreen.storyboard in Resources */,
-				6B44471D1D2D647D00278A56 /* Assets.xcassets in Resources */,
+				7BA7426E1FA916E60063430A /* ResizablePlaybackViewController.storyboard in Resources */,
+				7BA7426F1FA916E60063430A /* Assets.xcassets in Resources */,
+				7BA742701FA916E60063430A /* LaunchScreen.storyboard in Resources */,
+				7BA742711FA916E60063430A /* InlinePlaybackViewController.storyboard in Resources */,
+				7BA742731FA916E60063430A /* MainViewController.storyboard in Resources */,
+				0E804E9920600DCA00C6D9D9 /* BrightcovePlayerController.storyboard in Resources */,
+				0EC1A82F205976E10033674A /* SettingsViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		94383D5F857B1D90E4719B1C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpotX-Demo/Pods-SpotX-Demo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BE77837FDC4B7FDC8B1DB989 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SpotX-Demo/Pods-SpotX-Demo-resources.sh",
-				"${PODS_ROOT}/SpotX-SDK/SpotXAssets.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpotX-Demo/Pods-SpotX-Demo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D525E7BA37F611B7E23ACBA6 /* [CP] Check Pods Manifest.lock */ = {
+		8192D588F8999280B9FAB5DB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -226,70 +281,146 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SpotX-Demo-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-SpotX-Demo-iOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A01FFADEF663916C2A28E30D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SpotX-Demo-iOS/Pods-SpotX-Demo-iOS-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/Brightcove-Player-Core/BCOVPUIResources.bundle",
+				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Internal/Common/MPAdBrowserController.xib",
+				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPCloseBtn.png",
+				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPCloseBtn@2x.png",
+				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPCloseBtn@3x.png",
+				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPCloseButtonX.png",
+				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPCloseButtonX@2x.png",
+				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPCloseButtonX@3x.png",
+				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPCountdownTimer.html",
+				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPDAAIcon.png",
+				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPDAAIcon@2x.png",
+				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPDAAIcon@3x.png",
+				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPMutedBtn.png",
+				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPMutedBtn@2x.png",
+				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPMutedBtn@3x.png",
+				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPPlayBtn.png",
+				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPPlayBtn@2x.png",
+				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPPlayBtn@3x.png",
+				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPUnmutedBtn.png",
+				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPUnmutedBtn@2x.png",
+				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPUnmutedBtn@3x.png",
+				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MRAID.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BCOVPUIResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPAdBrowserController.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPCloseBtn.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPCloseBtn@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPCloseBtn@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPCloseButtonX.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPCloseButtonX@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPCloseButtonX@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPCountdownTimer.html",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPDAAIcon.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPDAAIcon@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPDAAIcon@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPMutedBtn.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPMutedBtn@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPMutedBtn@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPPlayBtn.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPPlayBtn@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPPlayBtn@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPUnmutedBtn.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPUnmutedBtn@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPUnmutedBtn@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MRAID.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpotX-Demo-iOS/Pods-SpotX-Demo-iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8F2C66E337150DA364D41D6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SpotX-Demo-iOS/Pods-SpotX-Demo-iOS-frameworks.sh",
+				"${PODS_ROOT}/Brightcove-Player-Core/ios/dynamic/BrightcovePlayerSDK.framework",
+				"${PODS_ROOT}/SpotX-Brightcove-Plugin/SpotXBrightcovePlugin.framework",
+				"${PODS_ROOT}/SpotX-SDK/SpotX.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BrightcovePlayerSDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SpotXBrightcovePlugin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SpotX.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpotX-Demo-iOS/Pods-SpotX-Demo-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		6B4447091D2D647D00278A56 /* Sources */ = {
+		7BA742601FA916E60063430A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B4447181D2D647D00278A56 /* InterstitialViewController.m in Sources */,
-				6B4447151D2D647D00278A56 /* AppDelegate.m in Sources */,
-				6B4447121D2D647D00278A56 /* main.m in Sources */,
-				D0BB9369202240C00054D654 /* MainViewController.m in Sources */,
-				D0B1EE2120223A790067C5E9 /* InlineViewController.m in Sources */,
+				7BA742611FA916E60063430A /* InlinePlaybackViewController.m in Sources */,
+				0EC1A833205988070033674A /* BrightcoveViewController.m in Sources */,
+				0EEFAF631FFD7F96003D1545 /* SettingsViewController.m in Sources */,
+				0EC1A81F2056DFAA0033674A /* BrightcovePlayerController.m in Sources */,
+				7BA742641FA916E60063430A /* SDKViewController.m in Sources */,
+				7BA742651FA916E60063430A /* ResizablePlaybackViewController.m in Sources */,
+				7BA742661FA916E60063430A /* AppDelegate.m in Sources */,
+				0ED15D4F1FE304B500246AED /* MoPubViewController.m in Sources */,
+				0EEFAF671FFE8922003D1545 /* Preferences.m in Sources */,
+				7BA742671FA916E60063430A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		6B44471E1D2D647D00278A56 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6B44471F1D2D647D00278A56 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		D0BB936B2022431F0054D654 /* MainViewController.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D0BB936C2022431F0054D654 /* Base */,
-			);
-			name = MainViewController.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		6B4447221D2D647D00278A56 /* Debug */ = {
+		6B9FE0B71C93109F009C8BF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_MODULE_DEBUGGING = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -307,34 +438,45 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		6B4447231D2D647D00278A56 /* Release */ = {
+		6B9FE0B81C93109F009C8BF0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_MODULE_DEBUGGING = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -346,60 +488,189 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
 				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		6B4447251D2D647D00278A56 /* Debug */ = {
+		7B46E1FA1F016FEE00E31046 /* Test */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D2B8F0A75BAE13E266C7E1A0 /* Pods-SpotX-Demo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_MODULE_DEBUGGING = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					"TEST_ONLY=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Test;
+		};
+		7BA742791FA916E60063430A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81350D82DC57A87E1FD7FCB0 /* Pods-SpotX-Demo-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "SpotX-Demo/Info.plist";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = M4T49QG5CY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Info-iOS.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.spotxchange.sdk.demo.SpotX-Demo";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.spotxchange.avplayer.SpotX-iOSTest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		6B4447261D2D647D00278A56 /* Release */ = {
+		7BA7427A1FA916E60063430A /* Test */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 10023A23582A9F647F7150E4 /* Pods-SpotX-Demo.release.xcconfig */;
+			baseConfigurationReference = 0C3CB13D23362848B01BE0A8 /* Pods-SpotX-Demo-iOS.test.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "SpotX-Demo/Info.plist";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = M4T49QG5CY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				INFOPLIST_FILE = "$(SRCROOT)/Info-iOS.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.spotxchange.sdk.demo.SpotX-Demo";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.spotxchange.avplayer.SpotX-iOSTest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Test;
+		};
+		7BA7427B1FA916E60063430A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC4529431376BDF68A155936 /* Pods-SpotX-Demo-iOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = M4T49QG5CY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Info-iOS.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.spotxchange.avplayer.SpotX-iOSTest";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6B4447081D2D647D00278A56 /* Build configuration list for PBXProject "SpotX-Demo" */ = {
+		6B9FE09F1C93109F009C8BF0 /* Build configuration list for PBXProject "SpotX-Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6B4447221D2D647D00278A56 /* Debug */,
-				6B4447231D2D647D00278A56 /* Release */,
+				6B9FE0B71C93109F009C8BF0 /* Debug */,
+				7B46E1FA1F016FEE00E31046 /* Test */,
+				6B9FE0B81C93109F009C8BF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6B4447241D2D647D00278A56 /* Build configuration list for PBXNativeTarget "SpotX-Demo" */ = {
+		7BA742781FA916E60063430A /* Build configuration list for PBXNativeTarget "SpotX-Demo-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6B4447251D2D647D00278A56 /* Debug */,
-				6B4447261D2D647D00278A56 /* Release */,
+				7BA742791FA916E60063430A /* Debug */,
+				7BA7427A1FA916E60063430A /* Test */,
+				7BA7427B1FA916E60063430A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 6B4447051D2D647D00278A56 /* Project object */;
+	rootObject = 6B9FE09C1C93109F009C8BF0 /* Project object */;
 }

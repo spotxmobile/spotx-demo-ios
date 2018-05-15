@@ -1,12 +1,14 @@
-## SpotX SDK for iOS Demo
+# SpotX Demo App for iOS
 
-Simple app demonstrating basic integration of the SpotX SDK.
+This is an example app for the SpotX iOS SDK.
 
+Documentation can be found here: https://developer.spotxchange.com/content/local/docs/sdkDocs/Mobile-CTV/iOS/sdk.md
 
-### Usage
+### Installation
 
 ```
-> git clone git@github.com:spotxmobile/spotx-demo-ios.git
-> pod install
-> open SpotX-Demo.xcworkspace
+git clone git@github.com:spotxmobile/spotx-demo-ios.git
+cd spotx-demo-ios
+pod install
+open SpotX-Demo.xcworkspace
 ```

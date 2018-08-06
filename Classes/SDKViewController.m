@@ -42,6 +42,8 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   
+  _versionLabel.text = [NSString stringWithFormat:@"VERSION %@", [SpotX version]];
+  
   // create "done" button on keyboard
   UIToolbar *keyboardDoneButtonView = [[UIToolbar alloc] init];
   [keyboardDoneButtonView sizeToFit];
@@ -89,6 +91,11 @@
 
 -(IBAction)doneClicked:(id)sender
 {
+  [self.view endEditing:YES];
+  [_channelIDField resignFirstResponder];
+}
+
+-(IBAction)backgroundTap:(UITapGestureRecognizer *)sender {
   [self.view endEditing:YES];
   [_channelIDField resignFirstResponder];
 }

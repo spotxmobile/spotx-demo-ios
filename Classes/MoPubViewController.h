@@ -12,6 +12,7 @@
 @interface MoPubViewController : UIViewController <MPInterstitialAdControllerDelegate, MPRewardedVideoDelegate,
                                                    UIPopoverPresentationControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
 
+@property(strong) IBOutlet UILabel* versionLabel;
 
 @end
 

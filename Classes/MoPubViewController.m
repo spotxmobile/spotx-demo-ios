@@ -46,6 +46,8 @@ static NSDictionary* presetUnits(){
   _interstitialID.text = DEFAULT_INTERSTITIAL_ID;
   _rewardedID.text = DEFAULT_REWARDED_ID;
   
+  _versionLabel.text = [NSString stringWithFormat:@"VERSION %@", [SpotX version]];
+  
   // create "done" button on keyboard
   UIToolbar *keyboardDoneButtonView = [[UIToolbar alloc] init];
   [keyboardDoneButtonView sizeToFit];

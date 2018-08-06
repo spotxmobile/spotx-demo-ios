@@ -8,6 +8,7 @@
 
 @interface SDKViewController : UIViewController <SpotXAdPlayerDelegate, UITextFieldDelegate>
 
+@property(strong) IBOutlet UILabel* versionLabel;
 
 @end
 

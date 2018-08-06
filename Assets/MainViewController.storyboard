@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tKh-Bs-WUQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tKh-Bs-WUQ">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -45,7 +45,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="VERSION 4.0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qR3-Z1-YuD">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="VERSION 4.X.X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qR3-Z1-YuD">
                                 <rect key="frame" x="16" y="374" width="288" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
@@ -223,6 +223,9 @@
                                 <include reference="QWL-Vt-IhD"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="jTM-A0-htj" appends="YES" id="rQn-oT-CNt"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="SDK" image="tab-icon-spotx" id="Ed9-XF-Vdq"/>
                     <connections>
@@ -231,9 +234,15 @@
                         <outlet property="_placementTypeControl" destination="v0d-Hs-3wh" id="neQ-49-frS"/>
                         <outlet property="_playAdButton" destination="Y5H-Vc-vvv" id="AG1-ua-nhb"/>
                         <outlet property="_vpaidControl" destination="Tem-AF-vNp" id="hOn-hc-CmJ"/>
+                        <outlet property="versionLabel" destination="qR3-Z1-YuD" id="0Ph-PO-UC4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="jTM-A0-htj">
+                    <connections>
+                        <action selector="backgroundTap:" destination="BYZ-38-t0r" id="FdX-6a-5be"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-512" y="-685"/>
         </scene>
@@ -249,7 +258,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VERSION 4.0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBz-in-5mQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VERSION 4.X.X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBz-in-5mQ">
                                 <rect key="frame" x="16" y="374" width="288" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
@@ -415,6 +424,7 @@
                         <outlet property="_playInterstitialButton" destination="e50-uE-gsQ" id="EAk-lH-jbz"/>
                         <outlet property="_playRewardedButton" destination="JCf-8Y-yVu" id="K9o-sm-zPh"/>
                         <outlet property="_rewardedID" destination="22j-72-H53" id="rCl-gZ-PSx"/>
+                        <outlet property="versionLabel" destination="FBz-in-5mQ" id="bbX-XZ-DSv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S7V-NV-iRJ" sceneMemberID="firstResponder"/>
@@ -507,8 +517,8 @@
                                     </constraint>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VERSION 4.0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2b-Fk-eY3">
-                                <rect key="frame" x="118" y="374" width="84" height="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VERSION 4.X.X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2b-Fk-eY3">
+                                <rect key="frame" x="117" y="374" width="86.5" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
@@ -587,6 +597,7 @@
                     <connections>
                         <outlet property="_channelIDField" destination="MtU-YH-Zk0" id="kcG-vz-nnB"/>
                         <outlet property="_vpaidControl" destination="qxJ-gG-JSC" id="jsS-Xs-d5L"/>
+                        <outlet property="versionLabel" destination="T2b-Fk-eY3" id="ewc-s0-Msd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7KM-2p-iz7" sceneMemberID="firstResponder"/>

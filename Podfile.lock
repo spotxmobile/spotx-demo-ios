@@ -1,5 +1,5 @@
 PODS:
-  - Brightcove-Player-Core/dynamic (6.2.2)
+  - Brightcove-Player-Core/dynamic (6.3.5)
   - mopub-ios-sdk (4.20.1):
     - mopub-ios-sdk/MoPubSDK (= 4.20.1)
   - mopub-ios-sdk/Avid (4.20.1):
@@ -11,18 +11,18 @@ PODS:
     - mopub-ios-sdk/Avid
     - mopub-ios-sdk/Core
     - mopub-ios-sdk/Moat
-  - SpotX-Brightcove-Plugin (4.0.0):
+  - SpotX-Brightcove-Plugin (4.1.0):
     - SpotX-SDK
-  - SpotX-MoPub-Plugin (4.0.0):
+  - SpotX-MoPub-Plugin (4.1.0):
     - mopub-ios-sdk (~> 4.3)
     - SpotX-SDK
-  - SpotX-SDK (4.0.0)
-  - SpotX-SDK-MOAT (4.0.0):
+  - SpotX-SDK (4.1.0)
+  - SpotX-SDK-MOAT (4.1.0):
     - SpotX-SDK
 
 DEPENDENCIES:
   - Brightcove-Player-Core/dynamic
-  - mopub-ios-sdk
+  - mopub-ios-sdk (= 4.20.1)
   - SpotX-Brightcove-Plugin
   - SpotX-MoPub-Plugin
   - SpotX-SDK
@@ -39,13 +39,13 @@ SPEC REPOS:
     - SpotX-SDK-MOAT
 
 SPEC CHECKSUMS:
-  Brightcove-Player-Core: d4ec5bdea65922365eb6fea270bfc8228351d449
+  Brightcove-Player-Core: 0d76f169ff622ef658c61c7d4ef79aa5eaf67ff4
   mopub-ios-sdk: 6220599bacc1c47f4117b7af5e9616f6779157a5
-  SpotX-Brightcove-Plugin: d9872c38a6b5a06c324f285d187b2a7cd23b35a9
-  SpotX-MoPub-Plugin: cb78a06221485d950d717e1bc010ae15cfe88892
-  SpotX-SDK: de1af24e1ac9bd996b86bf96f864cab947e05d30
-  SpotX-SDK-MOAT: 24c59c610aae44600482a51e92ea7bfc293c0d26
+  SpotX-Brightcove-Plugin: 47dfe81511f3f4b2e5daa1cc9f867b5fd13907cf
+  SpotX-MoPub-Plugin: 86fa9909bd320f345e40fa6e79721e236cda0a4d
+  SpotX-SDK: 6f7544f888a48ab12f4cae14c58487cc0d4e0dda
+  SpotX-SDK-MOAT: 219861d84f3eaf5ed2f5889419778bb7abdc3b5d
 
-PODFILE CHECKSUM: aa1ef1cd7f94e4417eb91c7a30093a73ff302094
+PODFILE CHECKSUM: 069d99511c81e0753dd5cd9938740e3b1e3122e4
 
-COCOAPODS: 1.5.2
+COCOAPODS: 1.5.3

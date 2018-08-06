@@ -26,6 +26,8 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   
+  _versionLabel.text = [NSString stringWithFormat:@"VERSION %@", [SpotX version]];
+  
   // create "done" button on keyboard
   UIToolbar *keyboardDoneButtonView = [[UIToolbar alloc] init];
   [keyboardDoneButtonView sizeToFit];

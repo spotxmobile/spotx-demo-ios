@@ -52,7 +52,7 @@ static NSUserDefaults *_userDefaults;
 }
 
 + (SpotXAdRequest *)requestWithSettings {
-  // Create a request with our API key
+  // Create a request with your API key
   SpotXAdRequest * request = [[SpotXAdRequest alloc] initWithApiKey:@"apikey-1234"];
   
   NSString* channelID = [Preferences stringForKey:PREF_SDK_CHANNEL withDefault:DEFAULT_CHANNEL_ID];

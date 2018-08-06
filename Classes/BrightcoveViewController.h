@@ -6,4 +6,6 @@
 
 @interface BrightcoveViewController : UIViewController <UITextFieldDelegate>
 
+@property(strong) IBOutlet UILabel* versionLabel;
+
 @end

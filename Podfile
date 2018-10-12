@@ -4,6 +4,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 source 'https://github.com/brightcove/BrightcoveSpecs.git'
 
 target 'SpotX-Demo-Swift' do
+  project './SpotX-Demo-Swift.xcodeproj'
 
   # Pods for SpotX-Demo-Swift
   pod 'SpotX-SDK'

@@ -4,6 +4,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 source 'https://github.com/brightcove/BrightcoveSpecs.git'
 
 target 'SpotX-Demo-ObjC' do
+  project './SpotX-Demo-ObjC.xcodeproj'
 
   # Pods for SpotX-Demo-ObjC
   pod 'SpotX-SDK'
@@ -15,4 +16,6 @@ target 'SpotX-Demo-ObjC' do
   pod 'Brightcove-Player-Core/dynamic'
   pod 'SpotX-Brightcove-Plugin'
 
+  pod 'Google-Mobile-Ads-SDK'
+  pod 'SpotX-AdMob-Plugin'
 end

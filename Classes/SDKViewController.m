@@ -42,15 +42,7 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   
-  _versionLabel.text = [NSString stringWithFormat:@"VERSION %@", [SpotX version]];
-  
-  // create "done" button on keyboard
-  UIToolbar *keyboardDoneButtonView = [[UIToolbar alloc] init];
-  [keyboardDoneButtonView sizeToFit];
-  UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done " style:UIBarButtonItemStylePlain target:self action:@selector(doneClicked:)];
-  UIBarButtonItem *fakeButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-  [keyboardDoneButtonView setItems:[NSArray arrayWithObjects:fakeButton, doneButton, nil]];
-  _channelIDField.inputAccessoryView = keyboardDoneButtonView;
+  _channelIDField.inputAccessoryView = self.keyboardDoneButtonView;
   _channelIDField.delegate = self;
   
   // Request location permissions if they haven't been granted yet.
@@ -89,13 +81,7 @@
   [Preferences setBool:enable forKey:PREF_VPAID];
 }
 
--(IBAction)doneClicked:(id)sender
-{
-  [self.view endEditing:YES];
-  [_channelIDField resignFirstResponder];
-}
-
--(IBAction)backgroundTap:(UITapGestureRecognizer *)sender {
+- (void)dismissKeyboard {
   [self.view endEditing:YES];
   [_channelIDField resignFirstResponder];
 }
@@ -114,7 +100,7 @@
 }
 
 - (IBAction)play:(id)sender {
-  [_channelIDField resignFirstResponder];
+  [self dismissKeyboard];
   _playAdButton.enabled = NO;
 
   switch (_placementTypeControl.selectedSegmentIndex) {
@@ -128,14 +114,6 @@
       [self playResizable];
       break;
   }
-}
-
--(void)showMessage:(NSString *)message {
-  UIAlertController * alert = [UIAlertController alertControllerWithTitle:nil message:message preferredStyle:UIAlertControllerStyleAlert];
-
-  UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler: ^(UIAlertAction * action) {}];
-  [alert addAction:defaultAction];
-  [self presentViewController:alert animated:YES completion:nil];
 }
 
 -(void) playInterstitial {
@@ -215,6 +193,10 @@
   [[self presentingViewController] dismissViewControllerAnimated:YES completion: ^() {
     [self showMessage:error.localizedDescription];
   }];
+}
+
+- (void)spotx:(SpotXAdPlayer *)player ad:(SpotXAd *)ad didChangeSkippableState:(BOOL)skippable {
+  NSLog(@"SDK:Interstitial:didChangeSkippableState: %d", skippable);
 }
 
 @end

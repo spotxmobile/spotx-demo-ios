@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Uug-FY-y8q">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Uug-FY-y8q">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,14 +22,14 @@
                         <viewControllerLayoutGuide type="bottom" id="8fM-07-HtK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="mSr-Vd-BAz">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VF9-QL-SXf">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brightcove Player" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="15" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cdt-us-VuP">
-                                        <rect key="frame" x="64.5" y="40" width="192" height="36"/>
+                                        <rect key="frame" x="75" y="40" width="225" height="36"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -52,15 +58,14 @@
                                     <constraint firstAttribute="height" constant="96" id="SBC-wC-aKH">
                                         <variation key="heightClass=compact" constant="48"/>
                                     </constraint>
-                                    <constraint firstItem="Cdt-us-VuP" firstAttribute="centerY" secondItem="VF9-QL-SXf" secondAttribute="centerY" constant="10" id="Zan-Es-vD4">
-                                        <variation key="heightClass=compact" constant="0.0"/>
-                                    </constraint>
+                                    <constraint firstItem="Cdt-us-VuP" firstAttribute="centerY" relation="greaterThanOrEqual" secondItem="VF9-QL-SXf" secondAttribute="centerYWithinMargins" id="Zan-Es-vD4"/>
+                                    <constraint firstAttribute="bottom" secondItem="Cdt-us-VuP" secondAttribute="bottom" priority="750" constant="20" id="aFY-17-Jf1"/>
                                     <constraint firstItem="Cdt-us-VuP" firstAttribute="width" relation="lessThanOrEqual" secondItem="VF9-QL-SXf" secondAttribute="width" multiplier="0.6" id="mft-pg-Ri6"/>
-                                    <constraint firstItem="ZEV-Vs-ycE" firstAttribute="leading" secondItem="VF9-QL-SXf" secondAttribute="leading" constant="20" id="oTU-0d-rVU"/>
+                                    <constraint firstItem="ZEV-Vs-ycE" firstAttribute="leading" secondItem="VF9-QL-SXf" secondAttribute="leadingMargin" constant="12" id="oTU-0d-rVU"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Soz-8A-lY4">
-                                <rect key="frame" x="0.0" y="194" width="320" height="180"/>
+                                <rect key="frame" x="0.0" y="228" width="375" height="211"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Soz-8A-lY4" secondAttribute="height" multiplier="16:9" id="baz-Ce-sM6"/>

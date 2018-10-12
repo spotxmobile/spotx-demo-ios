@@ -73,12 +73,16 @@ static NSUserDefaults *_userDefaults;
     [request setCustom:@"pod[max_pod_dur]" value:podAdDuration];
   }
   
-  // This is how to enable GDPR with a consent string:
+  // This is how to enable GDPR with a consent string
   if ([Preferences boolForKey:PREF_GDPR_ENABLE withDefault:NO]) {
     NSString *userConsentString = [Preferences stringForKey:PREF_GDPR_CONSENT withDefault:@"GDPR Consent String"];
 
     [_userDefaults setObject:@"1" forKey:@"IABConsent_SubjectToGDPR"];
     [_userDefaults setObject:userConsentString forKey:@"IABConsent_ConsentString"];
+    [_userDefaults synchronize];
+  } else {
+    [_userDefaults removeObjectForKey:@"IABConsent_SubjectToGDPR"];
+    [_userDefaults removeObjectForKey:@"IABConsent_ConsentString"];
     [_userDefaults synchronize];
   }
   

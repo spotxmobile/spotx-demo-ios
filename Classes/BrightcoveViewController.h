@@ -3,9 +3,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ViewControllerBase.h"
 
-@interface BrightcoveViewController : UIViewController <UITextFieldDelegate>
-
-@property(strong) IBOutlet UILabel* versionLabel;
+@interface BrightcoveViewController : ViewControllerBase <UITextFieldDelegate>
 
 @end

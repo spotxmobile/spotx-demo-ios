@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hgr-KD-Emo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hgr-KD-Emo">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -53,14 +54,13 @@
                                 <color key="backgroundColor" red="0.51173597569999996" green="0.65396595000000002" blue="0.1259131134" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="J80-bJ-H93" firstAttribute="centerY" secondItem="DqR-ux-H5u" secondAttribute="centerY" id="IwU-nj-OBj"/>
+                                    <constraint firstAttribute="bottom" secondItem="DqR-ux-H5u" secondAttribute="bottom" priority="750" constant="24" id="LZ1-9N-MUq"/>
                                     <constraint firstItem="DqR-ux-H5u" firstAttribute="centerX" secondItem="Lhg-A4-P9y" secondAttribute="centerX" id="MvV-Dz-C1c"/>
                                     <constraint firstAttribute="height" constant="96" id="Vb1-hD-BSE">
                                         <variation key="heightClass=compact" constant="48"/>
                                     </constraint>
-                                    <constraint firstItem="J80-bJ-H93" firstAttribute="leading" secondItem="Lhg-A4-P9y" secondAttribute="leading" constant="20" id="bZt-Wk-dVK"/>
-                                    <constraint firstItem="DqR-ux-H5u" firstAttribute="centerY" secondItem="Lhg-A4-P9y" secondAttribute="centerY" constant="10" id="x7b-2I-VYG">
-                                        <variation key="heightClass=compact" constant="0.0"/>
-                                    </constraint>
+                                    <constraint firstItem="J80-bJ-H93" firstAttribute="leading" secondItem="Lhg-A4-P9y" secondAttribute="leadingMargin" constant="12" id="bZt-Wk-dVK"/>
+                                    <constraint firstItem="DqR-ux-H5u" firstAttribute="centerY" relation="greaterThanOrEqual" secondItem="Lhg-A4-P9y" secondAttribute="centerYWithinMargins" id="x7b-2I-VYG"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="uw3-FQ-f2M">

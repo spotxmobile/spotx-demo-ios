@@ -5,6 +5,7 @@
 #import "MoPubViewController.h"
 #import "InlinePlaybackViewController.h"
 #import "ResizablePlaybackViewController.h"
+#import "Preferences.h"
 
 @import SpotX;
 
@@ -43,86 +44,79 @@ static NSDictionary* presetUnits(){
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  _interstitialID.text = DEFAULT_INTERSTITIAL_ID;
-  _rewardedID.text = DEFAULT_REWARDED_ID;
+  _interstitialID.text = [Preferences stringForKey:PREF_MOPUB_INTERSTITIAL withDefault:DEFAULT_INTERSTITIAL_ID];
+  _rewardedID.text = [Preferences stringForKey:PREF_MOPUB_REWARDED withDefault:DEFAULT_REWARDED_ID];
   
-  _versionLabel.text = [NSString stringWithFormat:@"VERSION %@", [SpotX version]];
-  
-  // create "done" button on keyboard
-  UIToolbar *keyboardDoneButtonView = [[UIToolbar alloc] init];
-  [keyboardDoneButtonView sizeToFit];
-  UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done " style:UIBarButtonItemStylePlain target:self action:@selector(doneClicked:)];
-  UIBarButtonItem *fakeButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-  [keyboardDoneButtonView setItems:[NSArray arrayWithObjects:fakeButton, doneButton, nil]];
-  _interstitialID.inputAccessoryView = keyboardDoneButtonView;
-  _rewardedID.inputAccessoryView = keyboardDoneButtonView;
+  _interstitialID.delegate = self;
+  _rewardedID.delegate = self;
 }
 
--(IBAction)doneClicked:(id)sender
-{
+- (void)dismissKeyboard {
   [self.view endEditing:YES];
   [_interstitialID resignFirstResponder];
   [_rewardedID resignFirstResponder];
 }
 
 - (NSString *)interstitialID {
-  NSString *channel = _interstitialID.text;
-  if (![channel length]) {
-    channel = DEFAULT_INTERSTITIAL_ID;
+  NSString *adId = _interstitialID.text;
+  if (![adId length]) {
+    adId = DEFAULT_INTERSTITIAL_ID;
+    _interstitialID.text = adId;
   }
-  return channel;
+  return adId;
 }
+
 - (NSString *)rewardedID {
-  NSString *channel = _rewardedID.text;
-  if (![channel length]) {
-    channel = DEFAULT_REWARDED_ID;
+  NSString *adId = _rewardedID.text;
+  if (![adId length]) {
+    adId = DEFAULT_REWARDED_ID;
+    _rewardedID.text = adId;
   }
-  return channel;
+  return adId;
+}
+
+- (void)updateAdIDs {
+  [Preferences setString:[self interstitialID] forKey:PREF_MOPUB_INTERSTITIAL];
+  [Preferences setString:[self rewardedID] forKey:PREF_MOPUB_REWARDED];
 }
 
 - (IBAction)playInterstitial:(id)sender {
-  [self doneClicked:nil];
+  [self dismissKeyboard];
   _playInterstitialButton.enabled = _playRewardedButton.enabled = NO;
   
-  // MoPub requires API key to be set via [SpotX setApiKey:]
-  [SpotX setAPIKey:@"apikey-1234"];
+  // MoPub requires a global API key as it can't be set per-request
+  [SpotX setAPIKey:SPOTX_API_KEY];
+  
   _adController = [MPInterstitialAdController interstitialAdControllerForAdUnitId:[self interstitialID]];
   if(_adController != nil){
     _adController.delegate = self;
     [_loadingIndicator startAnimating];
     [_adController loadAd];
   } else {
-    [self showMessage:@"MoPub Failed To Create Ad Controller"];
+    [self showMessage:@"Failed to create MoPub ad controller"];
   }
 }
 
 - (IBAction)playRewarded:(id)sender {
-  [self doneClicked:nil];
+  [self dismissKeyboard];
   _playInterstitialButton.enabled = _playRewardedButton.enabled = NO;
   
-  // MoPub requires API key to be set via [SpotX setApiKey:]
-  [SpotX setAPIKey:@"apikey-1234"];
+  // MoPub requires a global API key as it can't be set per-request
+  [SpotX setAPIKey:SPOTX_API_KEY];
+  
   [[MoPub sharedInstance] initializeRewardedVideoWithGlobalMediationSettings:nil delegate:self];
   [MPRewardedVideo loadRewardedVideoAdWithAdUnitID:[self rewardedID] withMediationSettings:nil];
   [_loadingIndicator startAnimating];
 }
 
--(void)showMessage:(NSString *)message {
-  UIAlertController * alert = [UIAlertController alertControllerWithTitle:nil message:message preferredStyle:UIAlertControllerStyleAlert];
-
-  UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler: ^(UIAlertAction * action) {}];
-  [alert addAction:defaultAction];
-  [self presentViewController:alert animated:YES completion:nil];
-}
-
-- (void)showFail {
+- (void)showAdFailure {
   [_loadingIndicator stopAnimating];
   _adController = nil;
   _playInterstitialButton.enabled = _playRewardedButton.enabled = YES;
-  [self showMessage:@"Ad Failed To Load"];
+  [self showMessage:@"Ad playback failed"];
 }
 
-#pragma mark - Pop-up channel selector
+#pragma mark - Pop-up ad unit selector
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
   if ([segue.identifier isEqualToString:@"pickerSegue"]) {
@@ -136,7 +130,7 @@ static NSDictionary* presetUnits(){
     picker.delegate = self;
     picker.dataSource = self;
     // Select the current ad unit (if any)
-    NSUInteger adUnitIndex = [presetUnits().allValues indexOfObject:_interstitialID.text];
+    NSUInteger adUnitIndex = [presetUnits().allValues indexOfObject:[self interstitialID]];
     if(adUnitIndex != NSNotFound){
       customAdUnit = NO;
       [picker selectRow:adUnitIndex inComponent:0 animated:NO];
@@ -174,58 +168,81 @@ static NSDictionary* presetUnits(){
   // Set Ad Unit text field to the selected ad
   NSString* adUnit = presetUnits().allValues[row];
   [_interstitialID setText:adUnit];
+  [self updateAdIDs];
+}
+
+#pragma mark - UITextFieldDelegate
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+  [self updateAdIDs];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+  [textField resignFirstResponder];
+  return YES;
 }
 
 #pragma mark - MPInterstitialAdControllerDelegate
 
 - (void)interstitialDidLoadAd:(MPInterstitialAdController *)interstitial
 {
+  NSLog(@"MoPub:interstitialDidLoadAd");
+  // Ad loaded; play the ad
   [_loadingIndicator stopAnimating];
   [_adController showFromViewController:self];
 }
 
 - (void)interstitialDidFailToLoadAd:(MPInterstitialAdController *)interstitial
 {
-  [self showFail];
+  NSLog(@"MoPub:interstitialDidFailToLoadAd");
+  [self showAdFailure];
 }
 
 - (void)interstitialDidDisappear:(MPInterstitialAdController *)interstitial
 {
+  NSLog(@"MoPub:interstitialDidDisappear");
   _adController = nil;
   _playInterstitialButton.enabled = _playRewardedButton.enabled = YES;
 }
 
 - (void)interstitialDidExpire:(MPInterstitialAdController *)interstitial
 {
+  NSLog(@"MoPub:interstitialDidExpire");
   _adController = nil;
   _playInterstitialButton.enabled = _playRewardedButton.enabled = YES;
 }
 
 - (void)interstitialDidReceiveTapEvent:(MPInterstitialAdController *)interstitial
 {
-  // nothing
+  // Use this event to monitor click-thru
+  NSLog(@"MoPub:interstitialDidReceiveTapEvent");
 }
 
 #pragma mark - MPRewardedVideoDelegate
 
 - (void)rewardedVideoAdDidLoadForAdUnitID:(NSString *)adUnitID {
+  NSLog(@"MoPub:rewardedVideoAdDidLoad");
   [_loadingIndicator stopAnimating];
-  [MPRewardedVideo presentRewardedVideoAdForAdUnitID:adUnitID fromViewController:self withReward:nil];  // don't care about the reward
+  [MPRewardedVideo presentRewardedVideoAdForAdUnitID:adUnitID fromViewController:self withReward:nil];    // add your reward here
 }
 
 - (void)rewardedVideoAdDidFailToLoadForAdUnitID:(NSString *)adUnitID error:(NSError *)error {
-  [self showFail];
+  NSLog(@"MoPub:rewardedVideoAdDidFailToLoad");
+  [self showAdFailure];
 }
 
 - (void)rewardedVideoAdDidFailToPlayForAdUnitID:(NSString *)adUnitID error:(NSError *)error {
-  [self showFail];
+  NSLog(@"MoPub:rewardedVideoAdDidFailToPlay");
+  [self showAdFailure];
 }
 
 - (void)rewardedVideoAdDidDisappearForAdUnitID:(NSString *)adUnitID {
+  NSLog(@"MoPub:rewardedVideoAdDidDisappear");
   _playInterstitialButton.enabled = _playRewardedButton.enabled = YES;
 }
 
 - (void)rewardedVideoAdDidExpireForAdUnitID:(NSString *)adUnitID {
+  NSLog(@"MoPub:rewardedVideoAdDidExpire");
   _playInterstitialButton.enabled = _playRewardedButton.enabled = YES;
 }
 

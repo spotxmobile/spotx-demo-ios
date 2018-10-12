@@ -8,19 +8,17 @@
 #import "BrightcovePlayerController.h"
 #import "Preferences.h"
 
-#define kBigBuckBunnyVideo @"https://spotxchange-a.akamaihd.net/media/videos/orig/d/3/d35ba3e292f811e5b08c1680da020d5a.mp4"
+#define kBigBuckBunnyVideo @"https://cdn.spotxcdn.com/media/videos/orig/d/3/d35ba3e292f811e5b08c1680da020d5a.mp4"
 
 @interface BrightcovePlayerController () <BCOVPlaybackControllerDelegate, BCOVPUIPlayerViewDelegate>
 
 @property(nonatomic, strong) id<BCOVPlaybackController> controller;
 @property(nonatomic, strong) BCOVPUIPlayerView* playerView;
 
-@property(nonatomic, readwrite) BOOL prefersStatusBarHidden;
-
 @end
 
 @implementation BrightcovePlayerController {
-  BOOL _prefersStatusBarHidden;
+  BOOL _hideBars;
 }
 
 - (void)viewDidLoad {
@@ -84,26 +82,48 @@
   [_controller play];
 }
 
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
+  // Potentially rotating into landscape mode. On iPhone X, update home button status after the rotation is finished.
+  if (@available(iOS 11.0, *)) {
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(coordinator.transitionDuration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+      [self setNeedsUpdateOfHomeIndicatorAutoHidden];
+    });
+  }
+}
+
+- (BOOL)prefersStatusBarHidden {
+  // Hide status bar in full screen
+  return _hideBars || [super prefersStatusBarHidden];
+}
+
+- (BOOL)prefersHomeIndicatorAutoHidden {
+  // Hide home button in full screen, or in landscape
+  return _hideBars || UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation]) || [super prefersHomeIndicatorAutoHidden];
+}
+
+- (void)setHideBars:(BOOL)hideBars {
+  _hideBars = hideBars;
+  [self setNeedsStatusBarAppearanceUpdate];
+  if (@available(iOS 11.0, *)) {
+    [self setNeedsUpdateOfHomeIndicatorAutoHidden];
+  }
+}
+
+#pragma mark - Delegate functions
+
 - (void)playbackController:(id<BCOVPlaybackController>)controller playbackSession:(id<BCOVPlaybackSession>)session didEnterAdSequence:(BCOVAdSequence *)adSequence {
   // Ad is interrupting playback. Hide the player controls so they don't get in the way
   self.playerView.controlsContainerView.alpha = 0.;
 }
 
 - (void)playbackController:(id<BCOVPlaybackController>)controller playbackSession:(id<BCOVPlaybackSession>)session didExitAdSequence:(BCOVAdSequence *)adSequence {
+  // Ad break complete. Bring back the controls
   self.playerView.controlsContainerView.alpha = 1.;
 }
 
 - (void)playerView:(BCOVPUIPlayerView *)playerView didTransitionToScreenMode:(BCOVPUIScreenMode)screenMode {
-  self.prefersStatusBarHidden = (screenMode == BCOVPUIScreenModeFull);
-}
-
-- (BOOL)prefersStatusBarHidden {
-  return _prefersStatusBarHidden || [super prefersStatusBarHidden];
-}
-
-- (void)setPrefersStatusBarHidden:(BOOL)prefersStatusBarHidden {
-  _prefersStatusBarHidden = prefersStatusBarHidden;
-  [self setNeedsStatusBarAppearanceUpdate];
+  // Hide status bar when entering full screen mode
+  [self setHideBars:screenMode == BCOVPUIScreenModeFull];
 }
 
 @end

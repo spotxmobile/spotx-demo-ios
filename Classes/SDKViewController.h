@@ -3,12 +3,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ViewControllerBase.h"
 
 @import SpotX;
 
-@interface SDKViewController : UIViewController <SpotXAdPlayerDelegate, UITextFieldDelegate>
-
-@property(strong) IBOutlet UILabel* versionLabel;
+@interface SDKViewController : ViewControllerBase <SpotXAdPlayerDelegate, UITextFieldDelegate>
 
 @end
 

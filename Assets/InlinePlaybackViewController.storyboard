@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hgr-KD-Emo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hgr-KD-Emo">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -53,14 +54,13 @@
                                 <color key="backgroundColor" red="0.51173597569999996" green="0.65396595000000002" blue="0.1259131134" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="ppb-Gq-Cit" firstAttribute="centerX" secondItem="47W-Tf-egl" secondAttribute="centerX" id="DcA-FG-h4Z"/>
-                                    <constraint firstItem="wuY-gy-Cf8" firstAttribute="leading" secondItem="47W-Tf-egl" secondAttribute="leading" constant="20" id="Ls5-dc-bep"/>
+                                    <constraint firstItem="wuY-gy-Cf8" firstAttribute="leading" secondItem="47W-Tf-egl" secondAttribute="leadingMargin" constant="12" id="Ls5-dc-bep"/>
                                     <constraint firstAttribute="height" constant="96" id="Ogt-HP-Fli">
                                         <variation key="heightClass=compact" constant="48"/>
                                     </constraint>
-                                    <constraint firstItem="ppb-Gq-Cit" firstAttribute="centerY" secondItem="47W-Tf-egl" secondAttribute="centerY" constant="10" id="Yj7-Yc-D32">
-                                        <variation key="heightClass=compact" constant="0.0"/>
-                                    </constraint>
+                                    <constraint firstItem="ppb-Gq-Cit" firstAttribute="centerY" relation="greaterThanOrEqual" secondItem="47W-Tf-egl" secondAttribute="centerYWithinMargins" id="Yj7-Yc-D32"/>
                                     <constraint firstItem="wuY-gy-Cf8" firstAttribute="centerY" secondItem="ppb-Gq-Cit" secondAttribute="centerY" id="qkg-81-jTR"/>
+                                    <constraint firstAttribute="bottom" secondItem="ppb-Gq-Cit" secondAttribute="bottom" priority="750" constant="24" id="wJd-wv-wYd"/>
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m23-NW-Wc6">

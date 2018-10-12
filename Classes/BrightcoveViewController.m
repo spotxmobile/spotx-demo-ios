@@ -26,15 +26,7 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   
-  _versionLabel.text = [NSString stringWithFormat:@"VERSION %@", [SpotX version]];
-  
-  // create "done" button on keyboard
-  UIToolbar *keyboardDoneButtonView = [[UIToolbar alloc] init];
-  [keyboardDoneButtonView sizeToFit];
-  UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done " style:UIBarButtonItemStylePlain target:self action:@selector(doneClicked:)];
-  UIBarButtonItem *fakeButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-  [keyboardDoneButtonView setItems:[NSArray arrayWithObjects:fakeButton, doneButton, nil]];
-  _channelIDField.inputAccessoryView = keyboardDoneButtonView;
+  _channelIDField.inputAccessoryView = self.keyboardDoneButtonView;
   _channelIDField.delegate = self;
 }
 
@@ -54,8 +46,7 @@
   [Preferences setBool:enable forKey:PREF_VPAID];
 }
 
--(IBAction)doneClicked:(id)sender
-{
+- (void)dismissKeyboard {
   [self.view endEditing:YES];
   [_channelIDField resignFirstResponder];
 }

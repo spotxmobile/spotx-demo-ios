@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hgr-KD-Emo">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Inline Playback View Controller-->
+        <scene sceneID="CQu-T4-2km">
+            <objects>
+                <viewController id="hgr-KD-Emo" customClass="InlinePlaybackViewController" customModule="SpotX_Demo_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zRF-QP-w0O"/>
+                        <viewControllerLayoutGuide type="bottom" id="hgb-Z6-Kiv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9iU-RF-bpN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="47W-Tf-egl">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SPOTX_logo_wht_small" translatesAutoresizingMaskIntoConstraints="NO" id="ppb-Gq-Cit">
+                                        <rect key="frame" x="94" y="44" width="132" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="7lZ-eS-ja5">
+                                                <variation key="heightClass=compact" constant="22"/>
+                                            </constraint>
+                                            <constraint firstAttribute="width" secondItem="ppb-Gq-Cit" secondAttribute="height" multiplier="33:7" id="j4d-M2-4zx"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wuY-gy-Cf8">
+                                        <rect key="frame" x="20" y="44" width="28" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="wuY-gy-Cf8" secondAttribute="height" multiplier="1:1" id="AIO-pQ-fqN"/>
+                                            <constraint firstAttribute="height" constant="28" id="dsS-bT-2bx">
+                                                <variation key="heightClass=compact" constant="22"/>
+                                            </constraint>
+                                        </constraints>
+                                        <state key="normal" image="arrow_left"/>
+                                        <connections>
+                                            <action selector="onBackButtonPressed" destination="hgr-KD-Emo" eventType="touchUpInside" id="day-CN-p4v"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.51173597569999996" green="0.65396595000000002" blue="0.1259131134" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="ppb-Gq-Cit" firstAttribute="centerX" secondItem="47W-Tf-egl" secondAttribute="centerX" id="DcA-FG-h4Z"/>
+                                    <constraint firstAttribute="bottom" secondItem="ppb-Gq-Cit" secondAttribute="bottom" priority="750" constant="24" id="E6v-Sh-Yzl"/>
+                                    <constraint firstItem="wuY-gy-Cf8" firstAttribute="leading" secondItem="47W-Tf-egl" secondAttribute="leadingMargin" constant="12" id="Ls5-dc-bep"/>
+                                    <constraint firstAttribute="height" constant="96" id="Ogt-HP-Fli">
+                                        <variation key="heightClass=compact" constant="48"/>
+                                    </constraint>
+                                    <constraint firstItem="ppb-Gq-Cit" firstAttribute="centerY" relation="greaterThanOrEqual" secondItem="47W-Tf-egl" secondAttribute="centerYWithinMargins" id="Yj7-Yc-D32"/>
+                                    <constraint firstItem="wuY-gy-Cf8" firstAttribute="centerY" secondItem="ppb-Gq-Cit" secondAttribute="centerY" id="qkg-81-jTR"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m23-NW-Wc6">
+                                <rect key="frame" x="8" y="96" width="304" height="384"/>
+                                <subviews>
+                                    <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="uw3-FQ-f2M">
+                                        <rect key="frame" x="32" y="963" width="240" height="180"/>
+                                        <subviews>
+                                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="gA4-Gp-lRp">
+                                                <rect key="frame" x="102" y="71.5" width="37" height="37"/>
+                                            </activityIndicatorView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" secondItem="uw3-FQ-f2M" secondAttribute="width" multiplier="3:4" id="Azz-bS-hjh"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="S36-G6-SRC"/>
+                                            <constraint firstAttribute="height" priority="250" id="bD5-K7-9Bj"/>
+                                            <constraint firstItem="gA4-Gp-lRp" firstAttribute="centerX" secondItem="uw3-FQ-f2M" secondAttribute="centerX" id="dIR-Yi-II2"/>
+                                            <constraint firstItem="gA4-Gp-lRp" firstAttribute="centerY" secondItem="uw3-FQ-f2M" secondAttribute="centerY" id="p6R-gL-LUp"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DvW-8Y-d73">
+                                        <rect key="frame" x="8" y="40.5" width="288" height="913"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="SAb-Le-omF"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="600" id="efG-rW-Eil"/>
+                                        </constraints>
+                                        <string key="text">Lorem ipsum dolor sit amet, essent accusata appellantur eum an, no utinam euismod cum, ne has unum quaerendum. Sit duis habeo eu, vis ex modus eleifend reformidans. Vel nulla constituto at, alia dignissim vis ea. Ignota vocibus nominavi id his, brute consul consequat sit ne. Ea duo electram scribentur. Id qui mediocrem principes complectitur.
+
+Ei viderer epicurei per, dico vidit appetere his cu, duis modus etiam eum at. Possim noluisse suscipit cu mea, sumo convenire cum eu, ceteros electram vulputate usu ut. Duis tacimates necessitatibus duo eu, eum et denique detraxit, omnes populo vivendum ad his. At zril fabulas pertinacia qui, clita verear ocurreret quo no, vix autem liber omnes no. Modo saepe te ius, his vide incorrupte no. Pericula moderatius eu est, cu vitae option cum.
+
+At consulatu efficiendi assueverit quo, purto erat definitiones pri ne. Ut cum legimus minimum appellantur, vim verterem indoctum deterruisset id. Eu quo omnis postea, purto mediocrem honestatis ad eum. Dico ridens no has, eu suscipit inimicus recteque vel. Eos no dicam inimicus abhorreant, eum tation ponderum repudiare an.
+
+Et regione oblique malorum nec. Mundi ludus diceret id usu, inani impetus eam an, duo in audire utroque rationibus. Pro veritus sententiae ex, facer populo ea has. Quas feugait ei sed, ut eos salutatus dignissim. Te quando latine eos, sea saepe consequat id.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d6f-ya-y9j">
+                                        <rect key="frame" x="8" y="1153.5" width="288" height="1156.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="I9s-50-IAY"/>
+                                        </constraints>
+                                        <string key="text">An pri ferri abhorreant constituam, doctus discere dissentias usu ut. Pri duis detracto instructior et, usu ex alterum sententiae. Mel vero autem vituperatoribus no, vim impedit temporibus consectetuer an, vivendum quaerendum ius ea. Sit iusto choro deseruisse cu, nec oporteat splendide ut.
+
+Ei libris intellegat vel, ex quando cetero duo, te nam elit accusam elaboraret. Ex duo luptatum petentium scribentur, alterum patrioque reprehendunt no eam. No per quidam disputationi, dicit necessitatibus eam id. Sed an admodum deterruisset, ex illud soluta eum. Pri eu vero partiendo, dico ignota est ea.
+
+Mei percipit quaestio an, vis assum complectitur ut. Constituam scripserit cu mea, feugiat menandri ei mel. Pri aperiam molestiae scribentur ei, ne inani nullam duo, sea id assum habemus albucius. Nusquam appetere quaerendum cum ex, alii purto sadipscing ad qui.
+
+Ex atqui animal pro. Pri eu veniam facilis oportere, nam no quaeque interpretaris, nonumy numquam disputationi ne est. Sit sonet laboramus id, causae laoreet per eu. Placerat probatus ad eos, nam graece nostrum eloquentiam id, ex atqui elitr eligendi pro.
+
+Nam adhuc sapientem ea, soluta dictas per at, suavitate dignissim disputando vix ei. Dolor clita ius at. Pri minim viris placerat ne. Vim partiendo adolescens an, id impetus eligendi est, eos partem aliquip conclusionemque ea. Ad quo alia detraxit gloriatur, te duis aperiam vis.
+
+Suas labores liberavisse ius ea. Alii noluisse ea mea, te has falli instructior, eu quo albucius suscipit. Verear euismod his ne. Has an blandit consetetur, pro te inimicus percipitur. Sonet platonem mei ad, cum cu modo quas veniam. Partem convenire imperdiet at eos, sed rebum ridens diceret cu, ei eum melius equidem.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="▼▼▼   SCROLL DOWN FOR AD   ▼▼▼" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="WY6-m4-fbA">
+                                        <rect key="frame" x="8" y="10" width="288" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="d6f-ya-y9j" firstAttribute="leading" secondItem="DvW-8Y-d73" secondAttribute="leading" id="08V-1Q-rcD"/>
+                                    <constraint firstItem="uw3-FQ-f2M" firstAttribute="top" secondItem="DvW-8Y-d73" secondAttribute="bottom" constant="10" id="5AR-HY-Ifb"/>
+                                    <constraint firstItem="DvW-8Y-d73" firstAttribute="width" relation="lessThanOrEqual" secondItem="WY6-m4-fbA" secondAttribute="width" id="Elh-UQ-baS"/>
+                                    <constraint firstItem="DvW-8Y-d73" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="WY6-m4-fbA" secondAttribute="leading" id="Fqm-2G-eDZ"/>
+                                    <constraint firstItem="WY6-m4-fbA" firstAttribute="leading" secondItem="m23-NW-Wc6" secondAttribute="leading" constant="8" id="Fss-2S-kg5"/>
+                                    <constraint firstAttribute="trailing" secondItem="WY6-m4-fbA" secondAttribute="trailing" constant="8" id="Fx3-hS-Ajy"/>
+                                    <constraint firstItem="DvW-8Y-d73" firstAttribute="centerX" secondItem="m23-NW-Wc6" secondAttribute="centerX" priority="750" id="W4g-0e-Pch"/>
+                                    <constraint firstItem="uw3-FQ-f2M" firstAttribute="width" secondItem="m23-NW-Wc6" secondAttribute="width" multiplier="0.5" priority="750" id="ZbG-SW-P1F"/>
+                                    <constraint firstItem="DvW-8Y-d73" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="WY6-m4-fbA" secondAttribute="trailing" id="eDG-8M-B47"/>
+                                    <constraint firstItem="WY6-m4-fbA" firstAttribute="top" secondItem="m23-NW-Wc6" secondAttribute="top" constant="10" id="enR-Qj-zAB"/>
+                                    <constraint firstItem="DvW-8Y-d73" firstAttribute="top" secondItem="WY6-m4-fbA" secondAttribute="bottom" constant="10" id="evI-gQ-s8u"/>
+                                    <constraint firstItem="d6f-ya-y9j" firstAttribute="trailing" secondItem="DvW-8Y-d73" secondAttribute="trailing" id="fb8-mS-tis"/>
+                                    <constraint firstItem="d6f-ya-y9j" firstAttribute="width" secondItem="DvW-8Y-d73" secondAttribute="width" id="i0c-dY-1Ik"/>
+                                    <constraint firstItem="WY6-m4-fbA" firstAttribute="width" secondItem="m23-NW-Wc6" secondAttribute="width" constant="-16" id="qG3-ud-zHu"/>
+                                    <constraint firstItem="uw3-FQ-f2M" firstAttribute="centerX" secondItem="m23-NW-Wc6" secondAttribute="centerX" id="rkP-ze-xSm"/>
+                                    <constraint firstItem="d6f-ya-y9j" firstAttribute="top" secondItem="uw3-FQ-f2M" secondAttribute="bottom" constant="10" id="rnC-EZ-cKD"/>
+                                    <constraint firstAttribute="bottom" secondItem="d6f-ya-y9j" secondAttribute="bottom" id="wbS-Fw-HqY"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hgb-Z6-Kiv" firstAttribute="top" secondItem="m23-NW-Wc6" secondAttribute="bottom" id="2cZ-rI-Nrb"/>
+                            <constraint firstItem="m23-NW-Wc6" firstAttribute="top" secondItem="47W-Tf-egl" secondAttribute="bottom" id="D4m-qX-BRG"/>
+                            <constraint firstItem="m23-NW-Wc6" firstAttribute="leadingMargin" secondItem="9iU-RF-bpN" secondAttribute="leadingMargin" id="Fkc-uZ-SeT"/>
+                            <constraint firstItem="47W-Tf-egl" firstAttribute="top" secondItem="9iU-RF-bpN" secondAttribute="top" id="c71-ZB-3lG"/>
+                            <constraint firstAttribute="trailing" secondItem="47W-Tf-egl" secondAttribute="trailing" id="e14-f3-ZZk"/>
+                            <constraint firstItem="47W-Tf-egl" firstAttribute="leading" secondItem="9iU-RF-bpN" secondAttribute="leading" id="fn3-79-tJy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="m23-NW-Wc6" secondAttribute="trailingMargin" id="pvP-GA-L4A"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="_containerView" destination="uw3-FQ-f2M" id="i4Y-bE-i5n"/>
+                        <outlet property="_containerViewHeight" destination="Azz-bS-hjh" id="Ma4-Y4-hb1"/>
+                        <outlet property="_loadingIndicator" destination="gA4-Gp-lRp" id="RYe-7L-vrk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GXI-Yw-mzf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-119.53124999999999" y="26.354319180087845"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="SPOTX_logo_wht_small" width="395" height="84"/>
+        <image name="arrow_left" width="128" height="128"/>
+    </resources>
+</document>

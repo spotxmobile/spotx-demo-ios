@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hgr-KD-Emo">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Resizable Playback View Controller-->
+        <scene sceneID="CQu-T4-2km">
+            <objects>
+                <viewController id="hgr-KD-Emo" customClass="ResizablePlaybackViewController" customModule="SpotX_Demo_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zRF-QP-w0O"/>
+                        <viewControllerLayoutGuide type="bottom" id="hgb-Z6-Kiv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9iU-RF-bpN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lhg-A4-P9y">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SPOTX_logo_wht_small" translatesAutoresizingMaskIntoConstraints="NO" id="DqR-ux-H5u">
+                                        <rect key="frame" x="121" y="44" width="132" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="DqR-ux-H5u" secondAttribute="height" multiplier="33:7" id="1Jc-3D-ExH"/>
+                                            <constraint firstAttribute="height" constant="28" id="9UB-nt-v5q">
+                                                <variation key="heightClass=compact" constant="22"/>
+                                            </constraint>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J80-bJ-H93">
+                                        <rect key="frame" x="20" y="44" width="28" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="3h1-ll-zF5">
+                                                <variation key="heightClass=compact" constant="22"/>
+                                            </constraint>
+                                            <constraint firstAttribute="width" secondItem="J80-bJ-H93" secondAttribute="height" multiplier="1:1" id="P7G-Ar-TUR"/>
+                                        </constraints>
+                                        <state key="normal" image="arrow_left"/>
+                                        <connections>
+                                            <action selector="onBackButtonPressed" destination="hgr-KD-Emo" eventType="touchUpInside" id="KXi-BE-tNw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.51173597569999996" green="0.65396595000000002" blue="0.1259131134" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="DqR-ux-H5u" secondAttribute="bottom" priority="750" constant="24" id="5mu-w5-DZC"/>
+                                    <constraint firstItem="J80-bJ-H93" firstAttribute="centerY" secondItem="DqR-ux-H5u" secondAttribute="centerY" id="IwU-nj-OBj"/>
+                                    <constraint firstItem="DqR-ux-H5u" firstAttribute="centerX" secondItem="Lhg-A4-P9y" secondAttribute="centerX" id="MvV-Dz-C1c"/>
+                                    <constraint firstAttribute="height" constant="96" id="Vb1-hD-BSE">
+                                        <variation key="heightClass=compact" constant="48"/>
+                                    </constraint>
+                                    <constraint firstItem="J80-bJ-H93" firstAttribute="leading" secondItem="Lhg-A4-P9y" secondAttribute="leadingMargin" constant="12" id="bZt-Wk-dVK"/>
+                                    <constraint firstItem="DqR-ux-H5u" firstAttribute="centerY" relation="greaterThanOrEqual" secondItem="Lhg-A4-P9y" secondAttribute="centerYWithinMargins" id="x7b-2I-VYG"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="uw3-FQ-f2M">
+                                <rect key="frame" x="67.5" y="175" width="240" height="184"/>
+                                <subviews>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="gA4-Gp-lRp">
+                                        <rect key="frame" x="102" y="74" width="37" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="184" id="B2L-xV-jDB"/>
+                                    <constraint firstAttribute="width" constant="240" id="Nx0-lr-f1k"/>
+                                </constraints>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="I0g-Gp-pgG">
+                                <rect key="frame" x="14" y="616" width="347" height="31"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="hgr-KD-Emo" eventType="valueChanged" id="PGU-rn-K2y"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hgb-Z6-Kiv" firstAttribute="top" secondItem="I0g-Gp-pgG" secondAttribute="bottom" constant="21" id="47b-wG-5Uw"/>
+                            <constraint firstAttribute="trailing" secondItem="Lhg-A4-P9y" secondAttribute="trailing" id="9E2-zE-bAu"/>
+                            <constraint firstItem="uw3-FQ-f2M" firstAttribute="centerY" secondItem="9iU-RF-bpN" secondAttribute="centerY" multiplier="0.8" priority="250" id="AeA-zC-AS5"/>
+                            <constraint firstItem="uw3-FQ-f2M" firstAttribute="centerX" secondItem="9iU-RF-bpN" secondAttribute="centerX" id="Tfg-p6-7yf"/>
+                            <constraint firstItem="I0g-Gp-pgG" firstAttribute="trailing" secondItem="9iU-RF-bpN" secondAttribute="trailingMargin" id="c2S-Wq-oqJ"/>
+                            <constraint firstItem="I0g-Gp-pgG" firstAttribute="leading" secondItem="9iU-RF-bpN" secondAttribute="leadingMargin" id="cyC-g0-HxG"/>
+                            <constraint firstItem="uw3-FQ-f2M" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Lhg-A4-P9y" secondAttribute="bottom" priority="750" constant="24" id="dD4-ds-hnw"/>
+                            <constraint firstItem="Lhg-A4-P9y" firstAttribute="leading" secondItem="9iU-RF-bpN" secondAttribute="leading" id="pDb-H9-hqC"/>
+                            <constraint firstItem="Lhg-A4-P9y" firstAttribute="top" secondItem="9iU-RF-bpN" secondAttribute="top" id="rNx-js-oVv"/>
+                            <constraint firstItem="I0g-Gp-pgG" firstAttribute="top" relation="greaterThanOrEqual" secondItem="uw3-FQ-f2M" secondAttribute="bottom" constant="6" id="ram-qb-Lvl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="_containerView" destination="uw3-FQ-f2M" id="hhC-S0-D1B"/>
+                        <outlet property="_containerViewHeight" destination="B2L-xV-jDB" id="QDU-97-eMn"/>
+                        <outlet property="_loadingIndicator" destination="gA4-Gp-lRp" id="zOf-1H-Ko3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GXI-Yw-mzf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-119.2" y="26.53673163418291"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="SPOTX_logo_wht_small" width="395" height="84"/>
+        <image name="arrow_left" width="128" height="128"/>
+    </resources>
+</document>

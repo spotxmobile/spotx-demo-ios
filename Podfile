@@ -15,4 +15,6 @@ target 'SpotX-Demo-Swift' do
   pod 'Brightcove-Player-Core/dynamic'
   pod 'SpotX-Brightcove-Plugin'
 
+  pod 'Google-Mobile-Ads-SDK'
+  pod 'SpotX-AdMob-Plugin'
 end

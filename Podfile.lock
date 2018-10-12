@@ -1,5 +1,6 @@
 PODS:
-  - Brightcove-Player-Core/dynamic (6.3.5)
+  - Brightcove-Player-Core/dynamic (6.3.8)
+  - Google-Mobile-Ads-SDK (7.33.1)
   - mopub-ios-sdk (4.20.1):
     - mopub-ios-sdk/MoPubSDK (= 4.20.1)
   - mopub-ios-sdk/Avid (4.20.1):
@@ -22,6 +23,7 @@ PODS:
 
 DEPENDENCIES:
   - Brightcove-Player-Core/dynamic
+  - Google-Mobile-Ads-SDK
   - mopub-ios-sdk (= 4.20.1)
   - SpotX-Brightcove-Plugin
   - SpotX-MoPub-Plugin
@@ -32,6 +34,7 @@ SPEC REPOS:
   https://github.com/brightcove/BrightcoveSpecs.git:
     - Brightcove-Player-Core
   https://github.com/cocoapods/specs.git:
+    - Google-Mobile-Ads-SDK
     - mopub-ios-sdk
     - SpotX-Brightcove-Plugin
     - SpotX-MoPub-Plugin
@@ -39,13 +42,14 @@ SPEC REPOS:
     - SpotX-SDK-MOAT
 
 SPEC CHECKSUMS:
-  Brightcove-Player-Core: 0d76f169ff622ef658c61c7d4ef79aa5eaf67ff4
+  Brightcove-Player-Core: 2bd9df1754931c8bf58474f76ce5760a13cdb06b
+  Google-Mobile-Ads-SDK: 71c6d3e8d8f52673fa5a83fc0d027623b11fde16
   mopub-ios-sdk: 6220599bacc1c47f4117b7af5e9616f6779157a5
   SpotX-Brightcove-Plugin: 47dfe81511f3f4b2e5daa1cc9f867b5fd13907cf
   SpotX-MoPub-Plugin: 86fa9909bd320f345e40fa6e79721e236cda0a4d
   SpotX-SDK: 6f7544f888a48ab12f4cae14c58487cc0d4e0dda
   SpotX-SDK-MOAT: 219861d84f3eaf5ed2f5889419778bb7abdc3b5d
 
-PODFILE CHECKSUM: 0d58da15e92c313ca4d5b3b807a80110729a45e5
+PODFILE CHECKSUM: e77d321975c346f216c05d96bebb136e2f4c5418
 
 COCOAPODS: 1.5.3

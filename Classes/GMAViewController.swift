@@ -6,7 +6,7 @@ import UIKit
 import SpotX
 import GoogleMobileAds;
 
-let SPOTX_ADMOB_APPID       = "ca-app-pub-3831702055122907~6634335857"
+let SPOTX_GMA_APPID       = "ca-app-pub-3831702055122907~6634335857"
 
 let SPOTX_INTERSTITIAL_ID   = "ca-app-pub-3831702055122907/7657534644"
 let SPOTX_REWARDED_ID       = "ca-app-pub-3831702055122907/3610069309"
@@ -25,7 +25,7 @@ let rewardPresetUnits = [
   "SpotX Podding Ad Unit": "ca-app-pub-3831702055122907/2313299501"
 ]
 
-class AdMobViewController: ViewControllerBase, GADInterstitialDelegate, GADRewardBasedVideoAdDelegate, UITextFieldDelegate, UIPopoverPresentationControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
+class GMAViewController: ViewControllerBase, GADInterstitialDelegate, GADRewardBasedVideoAdDelegate, UITextFieldDelegate, UIPopoverPresentationControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
   @IBOutlet var _loadingIndicator: UIActivityIndicatorView!
   @IBOutlet var _playInterstitialButton: UIButton!
   @IBOutlet var _playRewardedButton: UIButton!
@@ -40,13 +40,13 @@ class AdMobViewController: ViewControllerBase, GADInterstitialDelegate, GADRewar
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    _interstitialID.text = Preferences.string(forKey: .ADMOB_INTERSTITIAL) ?? SPOTX_INTERSTITIAL_ID
-    _rewardedID.text = Preferences.string(forKey: .ADMOB_REWARDED) ?? SPOTX_REWARDED_ID
+    _interstitialID.text = Preferences.string(forKey: .GMA_INTERSTITIAL) ?? SPOTX_INTERSTITIAL_ID
+    _rewardedID.text = Preferences.string(forKey: .GMA_REWARDED) ?? SPOTX_REWARDED_ID
     
     _interstitialID.delegate = self
     _rewardedID.delegate = self
     
-    GADMobileAds.configure(withApplicationID: SPOTX_ADMOB_APPID)
+    GADMobileAds.configure(withApplicationID: SPOTX_GMA_APPID)
   }
   
   override func dismissKeyboard() {
@@ -69,7 +69,7 @@ class AdMobViewController: ViewControllerBase, GADInterstitialDelegate, GADRewar
     
     _interstitial = GADInterstitial.init(adUnitID: interstitialID())
     guard let _ = _interstitial else {
-      showMessage("Failed to create AdMob ad controller")
+      showMessage("Failed to create GMA ad controller")
       return
     }
     _interstitial.delegate = self
@@ -111,8 +111,8 @@ class AdMobViewController: ViewControllerBase, GADInterstitialDelegate, GADRewar
   }
   
   func updateAdIDs() {
-    Preferences.set(interstitialID(), forKey: .ADMOB_INTERSTITIAL)
-    Preferences.set(rewardedID(), forKey: .ADMOB_REWARDED)
+    Preferences.set(interstitialID(), forKey: .GMA_INTERSTITIAL)
+    Preferences.set(rewardedID(), forKey: .GMA_REWARDED)
   }
   
   func showAdFailure() {
@@ -199,28 +199,28 @@ class AdMobViewController: ViewControllerBase, GADInterstitialDelegate, GADRewar
   
   // MARK: GADInterstitialDelegate
   func interstitialDidReceiveAd(_ ad: GADInterstitial) {
-    NSLog("AdMob:interstitialDidReceiveAd")
+    NSLog("GMA:interstitialDidReceiveAd")
     // Ad loaded; play the ad
     _loadingIndicator.stopAnimating()
     if (_interstitial.isReady) {
       _interstitial.present(fromRootViewController: self)
     } else {
-      NSLog("AdMob:interstitialDidReceiveAd - Ad Not Ready")
+      NSLog("GMA:interstitialDidReceiveAd - Ad Not Ready")
     }
   }
   
   func interstitial(_ ad: GADInterstitial, didFailToReceiveAdWithError error: GADRequestError) {
-    NSLog("AdMob:didFailToReceiveAdWithError")
+    NSLog("GMA:didFailToReceiveAdWithError")
     self.showAdFailure()
   }
   
   func interstitialDidFail(toPresentScreen ad: GADInterstitial) {
-    NSLog("AdMob:interstitialDidFailToPresentScreen")
+    NSLog("GMA:interstitialDidFailToPresentScreen")
     self.showAdFailure()
   }
   
   func interstitialDidDismissScreen(_ ad: GADInterstitial) {
-    NSLog("AdMob:interstitialDidDismissScreen")
+    NSLog("GMA:interstitialDidDismissScreen")
     _interstitial = nil
     _playInterstitialButton.isEnabled = true
     _playRewardedButton.isEnabled = true
@@ -228,39 +228,39 @@ class AdMobViewController: ViewControllerBase, GADInterstitialDelegate, GADRewar
   
   func interstitialWillLeaveApplication(_ ad: GADInterstitial) {
     // Use this event to monitor click-thru
-    NSLog("AdMob:interstitialWillLeaveApplication")
+    NSLog("GMA:interstitialWillLeaveApplication")
   }
   
   // MARK: GADRewardBasedVideoAdDelegate
   
   func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd, didRewardUserWith reward: GADAdReward) {
-    NSLog("AdMob:rewardBasedVideoAd:didRewardUserWithReward")
+    NSLog("GMA:rewardBasedVideoAd:didRewardUserWithReward")
   }
   
   func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd, didFailToLoadWithError error: Error) {
-    NSLog("AdMob:rewardBasedVideoAd:didFailToLoadWithError")
+    NSLog("GMA:rewardBasedVideoAd:didFailToLoadWithError")
     self.showAdFailure()
   }
   
   func rewardBasedVideoAdDidReceive(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
-    NSLog("AdMob:rewardBasedVideoAdDidReceiveAd")
+    NSLog("GMA:rewardBasedVideoAdDidReceiveAd")
     _loadingIndicator.stopAnimating()
     if (GADRewardBasedVideoAd.sharedInstance().isReady) {
       GADRewardBasedVideoAd.sharedInstance().present(fromRootViewController: self)
     } else {
-      NSLog("AdMob:rewardBasedVideoAdDidReceiveAd - Ad Not Ready")
+      NSLog("GMA:rewardBasedVideoAdDidReceiveAd - Ad Not Ready")
     }
   }
   
   func rewardBasedVideoAdDidClose(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
-    NSLog("AdMob:rewardBasedVideoAdDidClose")
+    NSLog("GMA:rewardBasedVideoAdDidClose")
     _playInterstitialButton.isEnabled = true
     _playRewardedButton.isEnabled = true
   }
   
   func rewardBasedVideoAdWillLeaveApplication(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
     // Use this event to monitor click-thru
-    NSLog("AdMob:rewardBasedVideoAdWillLeaveApplication")
+    NSLog("GMA:rewardBasedVideoAdWillLeaveApplication")
   }
   
 }

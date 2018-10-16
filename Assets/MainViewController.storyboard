@@ -438,10 +438,10 @@
             </objects>
             <point key="canvasLocation" x="484" y="1"/>
         </scene>
-        <!--AdMob-->
+        <!--GMA-->
         <scene sceneID="dwn-Vv-gFT">
             <objects>
-                <viewController storyboardIdentifier="AdPubViewControllerId" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hTW-yv-CS1" customClass="AdMobViewController" customModule="SpotX_Demo_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AdPubViewControllerId" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hTW-yv-CS1" customClass="GMAViewController" customModule="SpotX_Demo_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vqq-7G-UJ7"/>
                         <viewControllerLayoutGuide type="bottom" id="0e5-ng-4Rx"/>
@@ -480,7 +480,7 @@
                                     <constraint firstItem="4rd-FO-gsU" firstAttribute="centerY" relation="greaterThanOrEqual" secondItem="A1p-HA-SNI" secondAttribute="centerYWithinMargins" id="RWx-Wd-Jlq"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="AdMob Ad Unit ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRS-5C-XR7">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="GMA Ad Unit ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRS-5C-XR7">
                                 <rect key="frame" x="16" y="108" width="288" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
@@ -542,7 +542,7 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 </variation>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AdMob Ad Unit ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4F2-GS-JRy">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GMA Ad Unit ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4F2-GS-JRy">
                                 <rect key="frame" x="16" y="277" width="288" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
@@ -621,7 +621,7 @@
                             <outletCollection property="gestureRecognizers" destination="tRv-Ui-kJz" appends="YES" id="0CS-PI-7qf"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="AdMob" image="tab-icon-adapter" id="0l2-Bh-34k"/>
+                    <tabBarItem key="tabBarItem" title="GMA" image="tab-icon-adapter" id="0l2-Bh-34k"/>
                     <connections>
                         <outlet property="_interstitialID" destination="vP5-04-zKl" id="huH-VP-uWa"/>
                         <outlet property="_loadingIndicator" destination="OSp-IU-CHo" id="6PK-QD-KAV"/>

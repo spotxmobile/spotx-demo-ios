@@ -22,8 +22,8 @@ class Preferences {
     case CHANNEL              = "Channel"         // Channel ID
     case MOPUB_INTERSTITIAL   = "MoPubI"          // Ad Unit ID (MoPub, Interstitial)
     case MOPUB_REWARDED       = "MoPubR"          // Ad Unit ID (MoPub, Rewarded)
-    case ADMOB_INTERSTITIAL   = "AdMobI"          // Ad Unit ID (AdMob, Interstitial)
-    case ADMOB_REWARDED       = "AdMobR"          // Ad Unit ID (AdMob, Rewarded)
+    case GMA_INTERSTITIAL     = "GMAI"            // Ad Unit ID (GMA, Interstitial)
+    case GMA_REWARDED         = "GMAR"            // Ad Unit ID (GMA, Rewarded)
   }
   
   // Default value when we can't find the User Default

@@ -17,5 +17,5 @@ target 'SpotX-Demo-ObjC' do
   pod 'SpotX-Brightcove-Plugin'
 
   pod 'Google-Mobile-Ads-SDK'
-  pod 'SpotX-AdMob-Plugin'
+  pod 'SpotX-GMA-Plugin'
 end

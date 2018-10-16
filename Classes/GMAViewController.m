@@ -2,7 +2,7 @@
 //  Copyright © 2017 SpotX, Inc. All rights reserved.
 //
 
-#import "AdMobViewController.h"
+#import "GMAViewController.h"
 #import "InlinePlaybackViewController.h"
 #import "ResizablePlaybackViewController.h"
 #import "Preferences.h"
@@ -10,7 +10,7 @@
 @import SpotX;
 @import GoogleMobileAds;
 
-#define SPOTX_ADMOB_APPID @"ca-app-pub-3831702055122907~6634335857"
+#define SPOTX_GMA_APPID @"ca-app-pub-3831702055122907~6634335857"
 
 #define SPOTX_INTERSTITIAL_ID  @"ca-app-pub-3831702055122907/7657534644"
 #define SPOTX_REWARDED_ID  @"ca-app-pub-3831702055122907/3610069309"
@@ -43,7 +43,7 @@ static NSDictionary* rewardPresetUnits(){
   return units;
 }
 
-@implementation AdMobViewController {
+@implementation GMAViewController {
   __weak IBOutlet UIActivityIndicatorView *_loadingIndicator;
   __weak IBOutlet UIButton *_playInterstitialButton;
   __weak IBOutlet UIButton *_playRewardedButton;
@@ -59,13 +59,13 @@ static NSDictionary* rewardPresetUnits(){
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  _interstitialID.text = [Preferences stringForKey:PREF_ADMOB_INTERSTITIAL withDefault:SPOTX_INTERSTITIAL_ID];
-  _rewardedID.text = [Preferences stringForKey:PREF_ADMOB_REWARDED withDefault:SPOTX_REWARDED_ID];
+  _interstitialID.text = [Preferences stringForKey:PREF_GMA_INTERSTITIAL withDefault:SPOTX_INTERSTITIAL_ID];
+  _rewardedID.text = [Preferences stringForKey:PREF_GMA_REWARDED withDefault:SPOTX_REWARDED_ID];
   
   _interstitialID.delegate = self;
   _rewardedID.delegate = self;
   
-  [GADMobileAds configureWithApplicationID:SPOTX_ADMOB_APPID];
+  [GADMobileAds configureWithApplicationID:SPOTX_GMA_APPID];
 }
 
 - (void)dismissKeyboard {
@@ -93,8 +93,8 @@ static NSDictionary* rewardPresetUnits(){
 }
 
 - (void)updateAdIDs {
-  [Preferences setString:[self interstitialID] forKey:PREF_ADMOB_INTERSTITIAL];
-  [Preferences setString:[self rewardedID] forKey:PREF_ADMOB_REWARDED];
+  [Preferences setString:[self interstitialID] forKey:PREF_GMA_INTERSTITIAL];
+  [Preferences setString:[self rewardedID] forKey:PREF_GMA_REWARDED];
 }
 
 - (IBAction)playInterstitial:(id)sender {
@@ -116,7 +116,7 @@ static NSDictionary* rewardPresetUnits(){
     [_loadingIndicator startAnimating];
     [_interstitial loadRequest:request];
   } else {
-    [self showMessage:@"Failed to create AdMob interstitial"];
+    [self showMessage:@"Failed to create GMA interstitial"];
   }
 }
 
@@ -217,68 +217,68 @@ static NSDictionary* rewardPresetUnits(){
 
 #pragma mark - GADInterstitialDelegate
 - (void)interstitialDidReceiveAd:(GADInterstitial *)ad {
-  NSLog(@"AdMob:interstitialDidReceiveAd");
+  NSLog(@"GMA:interstitialDidReceiveAd");
   // Ad loaded; play the ad
   [_loadingIndicator stopAnimating];
   if (_interstitial.isReady) {
     [_interstitial presentFromRootViewController:self];
   } else {
-    NSLog(@"AdMob:interstitialDidReceiveAd - Ad Not Ready");
+    NSLog(@"GMA:interstitialDidReceiveAd - Ad Not Ready");
   }
 }
 
 - (void)interstitial:(GADInterstitial *)ad didFailToReceiveAdWithError:(GADRequestError *)error {
-  NSLog(@"AdMob:didFailToReceiveAdWithError");
+  NSLog(@"GMA:didFailToReceiveAdWithError");
   [self showAdFailure];
 }
 
 - (void)interstitialDidFailToPresentScreen:(GADInterstitial *)ad {
-  NSLog(@"AdMob:interstitialDidFailToPresentScreen");
+  NSLog(@"GMA:interstitialDidFailToPresentScreen");
   [self showAdFailure];
 }
 
 - (void)interstitialDidDismissScreen:(GADInterstitial *)ad {
-  NSLog(@"AdMob:interstitialDidDismissScreen");
+  NSLog(@"GMA:interstitialDidDismissScreen");
   _interstitial = nil;
   _playInterstitialButton.enabled = _playRewardedButton.enabled = YES;
 }
 
 - (void)interstitialWillLeaveApplication:(GADInterstitial *)ad {
   // Use this event to monitor click-thru
-  NSLog(@"AdMob:interstitialWillLeaveApplication");
+  NSLog(@"GMA:interstitialWillLeaveApplication");
 }
 
 #pragma mark - GADRewardBasedVideoAdDelegate
 
 - (void)rewardBasedVideoAd:(GADRewardBasedVideoAd *)rewardBasedVideoAd
    didRewardUserWithReward:(GADAdReward *)reward {
-  NSLog(@"AdMob:rewardBasedVideoAd:didRewardUserWithReward");
+  NSLog(@"GMA:rewardBasedVideoAd:didRewardUserWithReward");
 }
 
 - (void)rewardBasedVideoAd:(GADRewardBasedVideoAd *)rewardBasedVideoAd
     didFailToLoadWithError:(NSError *)error {
-  NSLog(@"AdMob:rewardBasedVideoAd:didFailToLoadWithError");
+  NSLog(@"GMA:rewardBasedVideoAd:didFailToLoadWithError");
   [self showAdFailure];
 }
 
 - (void)rewardBasedVideoAdDidReceiveAd:(GADRewardBasedVideoAd *)rewardBasedVideoAd {
-  NSLog(@"AdMob:rewardBasedVideoAdDidReceiveAd");
+  NSLog(@"GMA:rewardBasedVideoAdDidReceiveAd");
   [_loadingIndicator stopAnimating];
   if ([[GADRewardBasedVideoAd sharedInstance] isReady]) {
     [[GADRewardBasedVideoAd sharedInstance] presentFromRootViewController:self];
   } else {
-    NSLog(@"AdMob:rewardBasedVideoAdDidReceiveAd - Ad Not Ready");
+    NSLog(@"GMA:rewardBasedVideoAdDidReceiveAd - Ad Not Ready");
   }
 }
 
 - (void)rewardBasedVideoAdDidClose:(GADRewardBasedVideoAd *)rewardBasedVideoAd {
-  NSLog(@"AdMob:rewardBasedVideoAdDidClose");
+  NSLog(@"GMA:rewardBasedVideoAdDidClose");
   _playInterstitialButton.enabled = _playRewardedButton.enabled = YES;
 }
 
 - (void)rewardBasedVideoAdWillLeaveApplication:(GADRewardBasedVideoAd *)rewardBasedVideoAd {
   // Use this event to monitor click-thru
-  NSLog(@"AdMob:rewardBasedVideoAdWillLeaveApplication");
+  NSLog(@"GMA:rewardBasedVideoAdWillLeaveApplication");
 }
 
 @end

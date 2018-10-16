@@ -19,20 +19,12 @@
 		0E55DCA02124865A00575AF0 /* BrightcoveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E55DC9F2124865A00575AF0 /* BrightcoveViewController.swift */; };
 		0E55DCA22124994800575AF0 /* BrightcovePlayerController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E55DCA12124994700575AF0 /* BrightcovePlayerController.storyboard */; };
 		0E55DCA421249A1000575AF0 /* BrightcovePlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E55DCA321249A1000575AF0 /* BrightcovePlayerController.swift */; };
-		19EDB2E5260A1884794C44FB /* libPods-SpotX-Demo-Swift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E5F531A9A2C16CD519E9643 /* libPods-SpotX-Demo-Swift.a */; };
-		7B24058C20AB469900AAAD0A /* SpotX.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7B24058A20AB469900AAAD0A /* SpotX.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7B24058E20AB46C600AAAD0A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B24058D20AB46C600AAAD0A /* UIKit.framework */; };
 		7B29ED0E21599707008272D3 /* AdMobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B29ED0D21599707008272D3 /* AdMobViewController.swift */; };
 		7B3FC60E20ACCBA50033923C /* MainViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B3FC60D20ACCBA40033923C /* MainViewController.storyboard */; };
 		7B3FC61020ACCFD70033923C /* SDKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3FC60F20ACCFD70033923C /* SDKViewController.swift */; };
-		7B503FAA20AC8DC500F864B3 /* SpotXBrightcovePlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B503FAC20AC8DC500F864B3 /* SpotXBrightcovePlugin.framework */; };
-		7B503FAB20AC8DC500F864B3 /* SpotXMoPubPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B503FAD20AC8DC500F864B3 /* SpotXMoPubPlugin.framework */; };
 		7B503FAE20AC8DC900F864B3 /* SPOTXMoatMobileAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B24058F20AB470100AAAD0A /* SPOTXMoatMobileAppKit.framework */; };
-		7B503FAF20AC8DE100F864B3 /* SpotXBrightcovePlugin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7B503FAC20AC8DC500F864B3 /* SpotXBrightcovePlugin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		7B503FB020AC8DE100F864B3 /* SpotXMoPubPlugin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7B503FAD20AC8DC500F864B3 /* SpotXMoPubPlugin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7B54175820AB3F3F0022CB90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B54175720AB3F3F0022CB90 /* AppDelegate.swift */; };
-		7BE20FF02166979E005C859C /* SpotXAdMobPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE20FF22166979E005C859C /* SpotXAdMobPlugin.framework */; };
-		7BE20FF4216697A9005C859C /* SpotXAdMobPlugin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE20FF22166979E005C859C /* SpotXAdMobPlugin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7BE8053120AB40A8001AF80A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BE8053020AB40A8001AF80A /* Assets.xcassets */; };
 		7BE8053420AB40CB001AF80A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BE8053220AB40CB001AF80A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -44,10 +36,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				7BE20FF4216697A9005C859C /* SpotXAdMobPlugin.framework in Embed Frameworks */,
-				7B503FAF20AC8DE100F864B3 /* SpotXBrightcovePlugin.framework in Embed Frameworks */,
-				7B503FB020AC8DE100F864B3 /* SpotXMoPubPlugin.framework in Embed Frameworks */,
-				7B24058C20AB469900AAAD0A /* SpotX.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -55,7 +43,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		012AD5BB822B928786D031A6 /* Pods-SpotX-Demo-Swift.test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpotX-Demo-Swift.test.xcconfig"; path = "../Pods/Target Support Files/Pods-SpotX-Demo-Swift/Pods-SpotX-Demo-Swift.test.xcconfig"; sourceTree = "<group>"; };
 		0E55DC83211A209800575AF0 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		0E55DC85211A3F0A00575AF0 /* InlinePlaybackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlinePlaybackViewController.swift; sourceTree = "<group>"; };
 		0E55DC89211A455100575AF0 /* InlinePlaybackViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InlinePlaybackViewController.storyboard; sourceTree = "<group>"; };
@@ -69,27 +56,16 @@
 		0E55DC9F2124865A00575AF0 /* BrightcoveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrightcoveViewController.swift; sourceTree = "<group>"; };
 		0E55DCA12124994700575AF0 /* BrightcovePlayerController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BrightcovePlayerController.storyboard; sourceTree = "<group>"; };
 		0E55DCA321249A1000575AF0 /* BrightcovePlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrightcovePlayerController.swift; sourceTree = "<group>"; };
-		7B24058320AB466E00AAAD0A /* SpotXMoPubPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SpotXMoPubPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B24058720AB468D00AAAD0A /* SpotXBrightcovePlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SpotXBrightcovePlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B24058A20AB469900AAAD0A /* SpotX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SpotX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B24058D20AB46C600AAAD0A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7B24058F20AB470100AAAD0A /* SPOTXMoatMobileAppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SPOTXMoatMobileAppKit.framework; path = ../Frameworks/SPOTXMoatMobileAppKit.framework; sourceTree = "<group>"; };
 		7B29ED0D21599707008272D3 /* AdMobViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobViewController.swift; sourceTree = "<group>"; };
 		7B3FC60D20ACCBA40033923C /* MainViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainViewController.storyboard; sourceTree = "<group>"; };
 		7B3FC60F20ACCFD70033923C /* SDKViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKViewController.swift; sourceTree = "<group>"; };
-		7B503FAC20AC8DC500F864B3 /* SpotXBrightcovePlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SpotXBrightcovePlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B503FAD20AC8DC500F864B3 /* SpotXMoPubPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SpotXMoPubPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B54175420AB3F3F0022CB90 /* SpotX-Demo-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpotX-Demo-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B54175720AB3F3F0022CB90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B54176320AB3F3F0022CB90 /* Info-Swift.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-Swift.plist"; sourceTree = "<group>"; };
-		7B790705215C06EC00F66DC5 /* SpotXAdMobPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SpotXAdMobPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7BD1F33D21669617007D32B5 /* SpotXAdMobPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SpotXAdMobPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7BE20FF22166979E005C859C /* SpotXAdMobPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SpotXAdMobPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BE8053020AB40A8001AF80A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BE8053220AB40CB001AF80A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		7E5F531A9A2C16CD519E9643 /* libPods-SpotX-Demo-Swift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SpotX-Demo-Swift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7FAC148CD2371DE90AB2741C /* Pods-SpotX-Demo-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpotX-Demo-Swift.release.xcconfig"; path = "../Pods/Target Support Files/Pods-SpotX-Demo-Swift/Pods-SpotX-Demo-Swift.release.xcconfig"; sourceTree = "<group>"; };
-		A83AB553B846BD73A0345683 /* Pods-SpotX-Demo-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpotX-Demo-Swift.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-SpotX-Demo-Swift/Pods-SpotX-Demo-Swift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +73,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BE20FF02166979E005C859C /* SpotXAdMobPlugin.framework in Frameworks */,
-				7B503FAA20AC8DC500F864B3 /* SpotXBrightcovePlugin.framework in Frameworks */,
-				7B503FAB20AC8DC500F864B3 /* SpotXMoPubPlugin.framework in Frameworks */,
 				7B24058E20AB46C600AAAD0A /* UIKit.framework in Frameworks */,
 				7B503FAE20AC8DC900F864B3 /* SPOTXMoatMobileAppKit.framework in Frameworks */,
-				19EDB2E5260A1884794C44FB /* libPods-SpotX-Demo-Swift.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,17 +84,8 @@
 		5D1D19C231370BECD4924297 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7BE20FF22166979E005C859C /* SpotXAdMobPlugin.framework */,
-				7BD1F33D21669617007D32B5 /* SpotXAdMobPlugin.framework */,
-				7B790705215C06EC00F66DC5 /* SpotXAdMobPlugin.framework */,
-				7B503FAC20AC8DC500F864B3 /* SpotXBrightcovePlugin.framework */,
-				7B503FAD20AC8DC500F864B3 /* SpotXMoPubPlugin.framework */,
-				7B24058A20AB469900AAAD0A /* SpotX.framework */,
-				7B24058720AB468D00AAAD0A /* SpotXBrightcovePlugin.framework */,
-				7B24058320AB466E00AAAD0A /* SpotXMoPubPlugin.framework */,
 				7B24058F20AB470100AAAD0A /* SPOTXMoatMobileAppKit.framework */,
 				7B24058D20AB46C600AAAD0A /* UIKit.framework */,
-				7E5F531A9A2C16CD519E9643 /* libPods-SpotX-Demo-Swift.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -135,7 +98,6 @@
 				7B54176320AB3F3F0022CB90 /* Info-Swift.plist */,
 				7B54175520AB3F3F0022CB90 /* Products */,
 				5D1D19C231370BECD4924297 /* Frameworks */,
-				B3F38C6E4CEB65B3563C9068 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -180,16 +142,6 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		B3F38C6E4CEB65B3563C9068 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				A83AB553B846BD73A0345683 /* Pods-SpotX-Demo-Swift.debug.xcconfig */,
-				012AD5BB822B928786D031A6 /* Pods-SpotX-Demo-Swift.test.xcconfig */,
-				7FAC148CD2371DE90AB2741C /* Pods-SpotX-Demo-Swift.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -197,13 +149,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7B54176620AB3F3F0022CB90 /* Build configuration list for PBXNativeTarget "SpotX-Demo-Swift" */;
 			buildPhases = (
-				6BD5AE683CDE82B538E3F0E6 /* [CP] Check Pods Manifest.lock */,
 				7B54175020AB3F3F0022CB90 /* Sources */,
 				7B54175120AB3F3F0022CB90 /* Frameworks */,
 				7B54175220AB3F3F0022CB90 /* Resources */,
 				7B24058620AB466E00AAAD0A /* Embed Frameworks */,
-				308F3519DFC4BEE9389C47C5 /* [CP] Embed Pods Frameworks */,
-				3C9D58A235E5287755694F39 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -264,63 +213,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		308F3519DFC4BEE9389C47C5 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/../Pods/Target Support Files/Pods-SpotX-Demo-Swift/Pods-SpotX-Demo-Swift-frameworks.sh",
-				"${PODS_ROOT}/Brightcove-Player-Core/ios/dynamic/BrightcovePlayerSDK.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BrightcovePlayerSDK.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-SpotX-Demo-Swift/Pods-SpotX-Demo-Swift-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3C9D58A235E5287755694F39 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/../Pods/Target Support Files/Pods-SpotX-Demo-Swift/Pods-SpotX-Demo-Swift-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/Brightcove-Player-Core/BCOVPUIResources.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BCOVPUIResources.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-SpotX-Demo-Swift/Pods-SpotX-Demo-Swift-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6BD5AE683CDE82B538E3F0E6 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SpotX-Demo-Swift-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7B54175020AB3F3F0022CB90 /* Sources */ = {
@@ -409,7 +301,6 @@
 		};
 		7B24059220AB476D00AAAD0A /* Test */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 012AD5BB822B928786D031A6 /* Pods-SpotX-Demo-Swift.test.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -549,7 +440,6 @@
 		};
 		7B54176720AB3F3F0022CB90 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A83AB553B846BD73A0345683 /* Pods-SpotX-Demo-Swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -572,7 +462,6 @@
 		};
 		7B54176820AB3F3F0022CB90 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7FAC148CD2371DE90AB2741C /* Pods-SpotX-Demo-Swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

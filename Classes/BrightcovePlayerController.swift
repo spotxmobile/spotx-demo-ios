@@ -52,16 +52,17 @@ class BrightcovePlayerController: UIViewController, BCOVPlaybackControllerDelega
   func loadVideo() {
     // Load our test video
     let videoURL = URL(string: TEST_VIDEO_URL)
-    var video = BCOVVideo.withURL(videoURL, deliveryMethod: kBCOVSourceDeliveryMP4)
+    let source = BCOVSource(url: videoURL, deliveryMethod: kBCOVSourceDeliveryMP4, properties: nil)
+    var video = BCOVVideo(source: source, cuePoints: nil, properties: nil)
     video = video?.update({ (mutableVideo) in
       // Create a pre-roll ad
-      let pointBegin = BCOVCuePoint(type: kBCOVCuePointTypeAdSlot, position: kCMTimeZero)!
+      let pointBegin = BCOVCuePoint(type: kBCOVCuePointTypeAdSlot, position: CMTime.zero)!
       
       // Create a mid-roll ad at the 15-second mark
-      let pointMid = BCOVCuePoint(type: kBCOVCuePointTypeAdSlot, position: CMTimeMake(15000, 1000))!
+      let pointMid = BCOVCuePoint(type: kBCOVCuePointTypeAdSlot, position: CMTime(value: 15000, timescale: 1000))!
       
       // Create a post-roll ad
-      let pointEnd = BCOVCuePoint(type: kBCOVCuePointTypeAdSlot, position: kCMTimePositiveInfinity)!
+      let pointEnd = BCOVCuePoint(type: kBCOVCuePointTypeAdSlot, position: CMTime.positiveInfinity)!
       
       mutableVideo?.cuePoints = BCOVCuePointCollection(array: [pointBegin, pointMid, pointEnd])
     })
@@ -104,9 +105,9 @@ class BrightcovePlayerController: UIViewController, BCOVPlaybackControllerDelega
   }
   
   @available(iOS 11.0, *)
-  override func prefersHomeIndicatorAutoHidden() -> Bool {
+  override var prefersHomeIndicatorAutoHidden: Bool {
     // Hide home button in full screen, or in landscape
-    return hideBars || UIApplication.shared.statusBarOrientation.isLandscape || super.prefersHomeIndicatorAutoHidden()
+    return hideBars || UIApplication.shared.statusBarOrientation.isLandscape || super.prefersHomeIndicatorAutoHidden
   }
   
   // MARK: Delegate functions

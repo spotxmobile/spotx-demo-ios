@@ -19,8 +19,8 @@ class ViewControllerBase: UIViewController {
     // create "done" button on keyboard
     keyboardDoneButtonView = UIToolbar()
     keyboardDoneButtonView.sizeToFit()
-    let doneButton: UIBarButtonItem! = UIBarButtonItem(title: "Done ", style: UIBarButtonItemStyle.plain, target: self, action: #selector(doneClicked))
-    let fakeButton: UIBarButtonItem! = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+    let doneButton: UIBarButtonItem! = UIBarButtonItem(title: "Done ", style: UIBarButtonItem.Style.plain, target: self, action: #selector(doneClicked))
+    let fakeButton: UIBarButtonItem! = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
     keyboardDoneButtonView.setItems([fakeButton, doneButton], animated: false)
   }
   
@@ -34,9 +34,9 @@ class ViewControllerBase: UIViewController {
   
   // Used to display a message to the user
   func showMessage(_ message: String!) {
-    let alert: UIAlertController = UIAlertController(title: nil, message: message, preferredStyle: UIAlertControllerStyle.alert)
+    let alert: UIAlertController = UIAlertController(title: nil, message: message, preferredStyle: UIAlertController.Style.alert)
     
-    let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default)
+    let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
     alert.addAction(defaultAction)
     self.present(alert, animated: true, completion: nil)
   }

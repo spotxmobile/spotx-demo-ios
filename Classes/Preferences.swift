@@ -30,7 +30,7 @@ class Preferences {
   public static let DEFAULT_CHANNEL_ID  = "85394"
   
   // Demo API key
-  public static let SPOTX_API_KEY       = "apikey-1234"
+  public static let SPOTX_API_KEY       = "apikey-default"
   
   // Getters/settings for preference values
   public static func string(forKey: Key) -> String? {
@@ -53,7 +53,7 @@ class Preferences {
   public static func getAdRequest() -> SpotXAdRequest {
     
     // Create a request with your API key
-    let request = SpotXAdRequest(apiKey: "apikey-1234")!
+    let request = SpotXAdRequest(apiKey: "apikey-default")!
     
     let channelId = string(forKey: .CHANNEL) ?? DEFAULT_CHANNEL_ID
     request.setChannel(channelId)

@@ -19,12 +19,12 @@
 #define PREF_SDK_CHANNEL          @"Channel"          // Channel ID (SDK view)
 #define PREF_MOPUB_INTERSTITIAL   @"MoPubI"           // Ad Unit ID (MoPub, Interstitial)
 #define PREF_MOPUB_REWARDED       @"MoPubR"           // Ad Unit ID (MoPub, Rewarded)
-#define PREF_ADMOB_INTERSTITIAL   @"AdMobI"           // Ad Unit ID (AdMob, Interstitial)
-#define PREF_ADMOB_REWARDED       @"AdMobR"           // Ad Unit ID (AdMob, Rewarded)
+#define PREF_GMA_INTERSTITIAL     @"GMAI"             // Ad Unit ID (GMA, Interstitial)
+#define PREF_GMA_REWARDED         @"GMAR"             // Ad Unit ID (GMA, Rewarded)
 
 #define DEFAULT_CHANNEL_ID  @"85394"
 
-#define SPOTX_API_KEY       @"apikey-1234"
+#define SPOTX_API_KEY       @"apikey-default"
 
 // Global ad preferences
 @interface Preferences : NSObject

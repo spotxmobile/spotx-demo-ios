@@ -17,7 +17,7 @@
 		0EEFAF671FFE8922003D1545 /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEFAF641FFE8922003D1545 /* Preferences.m */; };
 		7B503F9520AC8BCB00F864B3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B7B651A1DC3BDD100C81610 /* UIKit.framework */; };
 		7B503FA820AC8D3900F864B3 /* SPOTXMoatMobileAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BA742551FA8DB950063430A /* SPOTXMoatMobileAppKit.framework */; };
-		7B55EAA42159521F00347B9D /* AdMobViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B55EAA22159521E00347B9D /* AdMobViewController.m */; };
+		7B55EAA42159521F00347B9D /* GMAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B55EAA22159521E00347B9D /* GMAViewController.m */; };
 		7BA742611FA916E60063430A /* InlinePlaybackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F553E71F2A5BBB0042AC23 /* InlinePlaybackViewController.m */; };
 		7BA742641FA916E60063430A /* SDKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCDE0881DC3A3A10021D0F7 /* SDKViewController.m */; };
 		7BA742651FA916E60063430A /* ResizablePlaybackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D03C25EC1F9E81A6001AD0A7 /* ResizablePlaybackViewController.m */; };
@@ -28,7 +28,7 @@
 		7BA742701FA916E60063430A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B4DB96C1DD241B600D55FB8 /* LaunchScreen.storyboard */; };
 		7BA742711FA916E60063430A /* InlinePlaybackViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44F553E91F2A63B40042AC23 /* InlinePlaybackViewController.storyboard */; };
 		7BA742731FA916E60063430A /* MainViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B4DB96D1DD241B600D55FB8 /* MainViewController.storyboard */; };
-		C46151F4FB3FB2CF05ADCE3F /* libPods-SpotX-Demo-ObjC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 995B51CAB7B168A21884A905 /* libPods-SpotX-Demo-ObjC.a */; };
+		7D2E15B444C68123D455EA4C /* libPods-SpotX-Demo-ObjC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB416352200EF6F8EE1E89 /* libPods-SpotX-Demo-ObjC.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,7 +45,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		00A1DFF912534D79E4FB103E /* Pods-SpotX-Demo-ObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpotX-Demo-ObjC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpotX-Demo-ObjC/Pods-SpotX-Demo-ObjC.debug.xcconfig"; sourceTree = "<group>"; };
 		0E55DC972121EB3300575AF0 /* ViewControllerBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewControllerBase.h; sourceTree = "<group>"; };
 		0E55DC982121EB3300575AF0 /* ViewControllerBase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewControllerBase.m; sourceTree = "<group>"; };
 		0E804E9720600DCA00C6D9D9 /* BrightcovePlayerController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BrightcovePlayerController.storyboard; sourceTree = "<group>"; };
@@ -60,7 +59,7 @@
 		0EEFAF611FFD7F96003D1545 /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SettingsViewController.m; path = Classes/SettingsViewController.m; sourceTree = SOURCE_ROOT; };
 		0EEFAF641FFE8922003D1545 /* Preferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Preferences.m; sourceTree = "<group>"; };
 		0EEFAF651FFE8922003D1545 /* Preferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Preferences.h; sourceTree = "<group>"; };
-		35F35BF16739EFE6E5306420 /* Pods-SpotX-Demo-ObjC.test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpotX-Demo-ObjC.test.xcconfig"; path = "Pods/Target Support Files/Pods-SpotX-Demo-ObjC/Pods-SpotX-Demo-ObjC.test.xcconfig"; sourceTree = "<group>"; };
+		104E725D87CA148C534B1FB2 /* Pods-SpotX-Demo-ObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpotX-Demo-ObjC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpotX-Demo-ObjC/Pods-SpotX-Demo-ObjC.debug.xcconfig"; sourceTree = "<group>"; };
 		44F553E61F2A5BBB0042AC23 /* InlinePlaybackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InlinePlaybackViewController.h; sourceTree = "<group>"; };
 		44F553E71F2A5BBB0042AC23 /* InlinePlaybackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InlinePlaybackViewController.m; sourceTree = "<group>"; };
 		44F553E91F2A63B40042AC23 /* InlinePlaybackViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InlinePlaybackViewController.storyboard; sourceTree = "<group>"; };
@@ -74,15 +73,16 @@
 		6BCDE0851DC3A3A10021D0F7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6BCDE0871DC3A3A10021D0F7 /* SDKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDKViewController.h; sourceTree = "<group>"; };
 		6BCDE0881DC3A3A10021D0F7 /* SDKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDKViewController.m; sourceTree = "<group>"; };
-		7B55EAA22159521E00347B9D /* AdMobViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdMobViewController.m; sourceTree = "<group>"; };
-		7B55EAA32159521E00347B9D /* AdMobViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdMobViewController.h; sourceTree = "<group>"; };
+		7B55EAA22159521E00347B9D /* GMAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMAViewController.m; sourceTree = "<group>"; };
+		7B55EAA32159521E00347B9D /* GMAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMAViewController.h; sourceTree = "<group>"; };
 		7BA742551FA8DB950063430A /* SPOTXMoatMobileAppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SPOTXMoatMobileAppKit.framework; path = Frameworks/SPOTXMoatMobileAppKit.framework; sourceTree = "<group>"; };
 		7BA7427C1FA916E60063430A /* SpotX-Demo-ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpotX-Demo-ObjC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		886D7700986A6F73F44B1E89 /* Pods-SpotX-Demo-ObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpotX-Demo-ObjC.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpotX-Demo-ObjC/Pods-SpotX-Demo-ObjC.release.xcconfig"; sourceTree = "<group>"; };
-		995B51CAB7B168A21884A905 /* libPods-SpotX-Demo-ObjC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SpotX-Demo-ObjC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		83829AC70588E497BB71C9AB /* Pods-SpotX-Demo-ObjC.test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpotX-Demo-ObjC.test.xcconfig"; path = "Pods/Target Support Files/Pods-SpotX-Demo-ObjC/Pods-SpotX-Demo-ObjC.test.xcconfig"; sourceTree = "<group>"; };
+		B4C150B65AD8FEDB3ECC2B6D /* Pods-SpotX-Demo-ObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpotX-Demo-ObjC.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpotX-Demo-ObjC/Pods-SpotX-Demo-ObjC.release.xcconfig"; sourceTree = "<group>"; };
 		D03C25E81F9E8070001AD0A7 /* ResizablePlaybackViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ResizablePlaybackViewController.storyboard; sourceTree = "<group>"; };
 		D03C25EB1F9E81A6001AD0A7 /* ResizablePlaybackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResizablePlaybackViewController.h; sourceTree = "<group>"; };
 		D03C25EC1F9E81A6001AD0A7 /* ResizablePlaybackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResizablePlaybackViewController.m; sourceTree = "<group>"; };
+		F9BB416352200EF6F8EE1E89 /* libPods-SpotX-Demo-ObjC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SpotX-Demo-ObjC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,13 +92,23 @@
 			files = (
 				7B503F9520AC8BCB00F864B3 /* UIKit.framework in Frameworks */,
 				7B503FA820AC8D3900F864B3 /* SPOTXMoatMobileAppKit.framework in Frameworks */,
-				C46151F4FB3FB2CF05ADCE3F /* libPods-SpotX-Demo-ObjC.a in Frameworks */,
+				7D2E15B444C68123D455EA4C /* libPods-SpotX-Demo-ObjC.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		68EA713A5F674671D9DE328D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				104E725D87CA148C534B1FB2 /* Pods-SpotX-Demo-ObjC.debug.xcconfig */,
+				83829AC70588E497BB71C9AB /* Pods-SpotX-Demo-ObjC.test.xcconfig */,
+				B4C150B65AD8FEDB3ECC2B6D /* Pods-SpotX-Demo-ObjC.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6B4DB9651DD2409200D55FB8 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,8 +126,8 @@
 		6B7B650F1DC3BC4A00C81610 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				7B55EAA32159521E00347B9D /* AdMobViewController.h */,
-				7B55EAA22159521E00347B9D /* AdMobViewController.m */,
+				7B55EAA32159521E00347B9D /* GMAViewController.h */,
+				7B55EAA22159521E00347B9D /* GMAViewController.m */,
 				6BCDE0841DC3A3A10021D0F7 /* AppDelegate.h */,
 				6BCDE0851DC3A3A10021D0F7 /* AppDelegate.m */,
 				0EC1A81C2056DFAA0033674A /* BrightcovePlayerController.h */,
@@ -151,7 +161,7 @@
 				6BCDE0821DC3A3A10021D0F7 /* main.m */,
 				6B9FE0A61C93109F009C8BF0 /* Products */,
 				6BCDE0501DC39E200021D0F7 /* Frameworks */,
-				9C4C973DA31AB6DB26AF7FF4 /* Pods */,
+				68EA713A5F674671D9DE328D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -168,19 +178,9 @@
 			children = (
 				7BA742551FA8DB950063430A /* SPOTXMoatMobileAppKit.framework */,
 				6B7B651A1DC3BDD100C81610 /* UIKit.framework */,
-				995B51CAB7B168A21884A905 /* libPods-SpotX-Demo-ObjC.a */,
+				F9BB416352200EF6F8EE1E89 /* libPods-SpotX-Demo-ObjC.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		9C4C973DA31AB6DB26AF7FF4 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				00A1DFF912534D79E4FB103E /* Pods-SpotX-Demo-ObjC.debug.xcconfig */,
-				35F35BF16739EFE6E5306420 /* Pods-SpotX-Demo-ObjC.test.xcconfig */,
-				886D7700986A6F73F44B1E89 /* Pods-SpotX-Demo-ObjC.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,13 +190,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7BA742781FA916E60063430A /* Build configuration list for PBXNativeTarget "SpotX-Demo-ObjC" */;
 			buildPhases = (
-				974BC55E1B993857042277D9 /* [CP] Check Pods Manifest.lock */,
+				3B742CE59B7931AEF0644FBA /* [CP] Check Pods Manifest.lock */,
 				7BA742601FA916E60063430A /* Sources */,
 				7BA742681FA916E60063430A /* Frameworks */,
 				7BA7426C1FA916E60063430A /* Resources */,
 				7BA742761FA916E60063430A /* Embed Frameworks */,
-				EA9E4C02BD59563D5EDED3EC /* [CP] Embed Pods Frameworks */,
-				67555EA03AA651021FE1555F /* [CP] Copy Pods Resources */,
+				DEAC426E712FC34CBDA0EC72 /* [CP] Embed Pods Frameworks */,
+				87152E1B745976D2A5796FC8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -214,7 +214,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "SpotX, Inc";
 				TargetAttributes = {
 					7BA7425D1FA916E60063430A = {
@@ -258,7 +258,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		67555EA03AA651021FE1555F /* [CP] Copy Pods Resources */ = {
+		3B742CE59B7931AEF0644FBA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SpotX-Demo-ObjC-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87152E1B745976D2A5796FC8 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -318,25 +336,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpotX-Demo-ObjC/Pods-SpotX-Demo-ObjC-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		974BC55E1B993857042277D9 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SpotX-Demo-ObjC-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EA9E4C02BD59563D5EDED3EC /* [CP] Embed Pods Frameworks */ = {
+		DEAC426E712FC34CBDA0EC72 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -344,14 +344,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SpotX-Demo-ObjC/Pods-SpotX-Demo-ObjC-frameworks.sh",
 				"${PODS_ROOT}/Brightcove-Player-Core/ios/dynamic/BrightcovePlayerSDK.framework",
-				"${PODS_ROOT}/SpotX-AdMob-Plugin/SpotXAdMobPlugin.framework",
 				"${PODS_ROOT}/SpotX-Brightcove-Plugin/SpotXBrightcovePlugin.framework",
 				"${PODS_ROOT}/SpotX-SDK/SpotX.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BrightcovePlayerSDK.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SpotXAdMobPlugin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SpotXBrightcovePlugin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SpotX.framework",
 			);
@@ -373,7 +371,7 @@
 				0EC1A81F2056DFAA0033674A /* BrightcovePlayerController.m in Sources */,
 				7BA742641FA916E60063430A /* SDKViewController.m in Sources */,
 				7BA742651FA916E60063430A /* ResizablePlaybackViewController.m in Sources */,
-				7B55EAA42159521F00347B9D /* AdMobViewController.m in Sources */,
+				7B55EAA42159521F00347B9D /* GMAViewController.m in Sources */,
 				7BA742661FA916E60063430A /* AppDelegate.m in Sources */,
 				0ED15D4F1FE304B500246AED /* MoPubViewController.m in Sources */,
 				0EEFAF671FFE8922003D1545 /* Preferences.m in Sources */,
@@ -398,12 +396,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -454,12 +454,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -504,12 +506,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -550,7 +554,7 @@
 		};
 		7BA742791FA916E60063430A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 00A1DFF912534D79E4FB103E /* Pods-SpotX-Demo-ObjC.debug.xcconfig */;
+			baseConfigurationReference = 104E725D87CA148C534B1FB2 /* Pods-SpotX-Demo-ObjC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -580,7 +584,7 @@
 		};
 		7BA7427A1FA916E60063430A /* Test */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 35F35BF16739EFE6E5306420 /* Pods-SpotX-Demo-ObjC.test.xcconfig */;
+			baseConfigurationReference = 83829AC70588E497BB71C9AB /* Pods-SpotX-Demo-ObjC.test.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -611,7 +615,7 @@
 		};
 		7BA7427B1FA916E60063430A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 886D7700986A6F73F44B1E89 /* Pods-SpotX-Demo-ObjC.release.xcconfig */;
+			baseConfigurationReference = B4C150B65AD8FEDB3ECC2B6D /* Pods-SpotX-Demo-ObjC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;

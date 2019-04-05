@@ -628,10 +628,10 @@
             </objects>
             <point key="canvasLocation" x="337.5" y="750"/>
         </scene>
-        <!--AdMob-->
+        <!--GMA-->
         <scene sceneID="Nvd-dd-r2E">
             <objects>
-                <viewController storyboardIdentifier="AdPubViewControllerId" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sCf-Kp-3ZC" customClass="AdMobViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AdPubViewControllerId" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sCf-Kp-3ZC" customClass="GMAViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Mut-CS-39N"/>
                         <viewControllerLayoutGuide type="bottom" id="qQl-oz-xfq"/>
@@ -670,7 +670,7 @@
                                     </constraint>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="AdMob Ad Unit ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a21-Dk-K4v">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="GMA Ad Unit ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a21-Dk-K4v">
                                 <rect key="frame" x="16" y="108" width="288" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
@@ -732,7 +732,7 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 </variation>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AdMob Ad Unit ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vc8-DQ-Lb9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GMA Ad Unit ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vc8-DQ-Lb9">
                                 <rect key="frame" x="16" y="277" width="288" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
@@ -812,7 +812,7 @@
                             <outletCollection property="gestureRecognizers" destination="GYV-h4-58u" appends="YES" id="moD-5L-mZR"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="AdMob" image="tab-icon-adapter" id="8tD-nM-XDN"/>
+                    <tabBarItem key="tabBarItem" title="GMA" image="tab-icon-adapter" id="8tD-nM-XDN"/>
                     <connections>
                         <outlet property="_interstitialID" destination="KTg-rJ-ttA" id="u8V-FP-uvq"/>
                         <outlet property="_loadingIndicator" destination="X4a-sI-L5q" id="hBG-5S-iaF"/>

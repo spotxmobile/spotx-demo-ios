@@ -1,6 +1,29 @@
 PODS:
   - Brightcove-Player-Core/dynamic (6.3.11)
-  - Google-Mobile-Ads-SDK (7.37.0)
+  - Google-Mobile-Ads-SDK (7.42.1):
+    - GoogleAppMeasurement (~> 5.7)
+  - GoogleAppMeasurement (5.8.0):
+    - GoogleUtilities/AppDelegateSwizzler (~> 5.2)
+    - GoogleUtilities/MethodSwizzler (~> 5.2)
+    - GoogleUtilities/Network (~> 5.2)
+    - "GoogleUtilities/NSData+zlib (~> 5.2)"
+    - nanopb (~> 0.3)
+  - GoogleUtilities/AppDelegateSwizzler (5.5.0):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+  - GoogleUtilities/Environment (5.5.0)
+  - GoogleUtilities/Logger (5.5.0):
+    - GoogleUtilities/Environment
+  - GoogleUtilities/MethodSwizzler (5.5.0):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/Network (5.5.0):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (5.5.0)"
+  - GoogleUtilities/Reachability (5.5.0):
+    - GoogleUtilities/Logger
   - mopub-ios-sdk (4.20.1):
     - mopub-ios-sdk/MoPubSDK (= 4.20.1)
   - mopub-ios-sdk/Avid (4.20.1):
@@ -12,6 +35,11 @@ PODS:
     - mopub-ios-sdk/Avid
     - mopub-ios-sdk/Core
     - mopub-ios-sdk/Moat
+  - nanopb (0.3.901):
+    - nanopb/decode (= 0.3.901)
+    - nanopb/encode (= 0.3.901)
+  - nanopb/decode (0.3.901)
+  - nanopb/encode (0.3.901)
   - SpotX-Brightcove-Plugin (4.2.0):
     - SpotX-SDK
   - SpotX-GMA-Plugin (4.2.0):
@@ -20,8 +48,8 @@ PODS:
   - SpotX-MoPub-Plugin (4.1.0):
     - mopub-ios-sdk (~> 4.3)
     - SpotX-SDK
-  - SpotX-SDK (4.2.1)
-  - SpotX-SDK-MOAT (4.2.1):
+  - SpotX-SDK (4.3.0)
+  - SpotX-SDK-MOAT (4.3.0):
     - SpotX-SDK
 
 DEPENDENCIES:
@@ -39,7 +67,10 @@ SPEC REPOS:
     - Brightcove-Player-Core
   https://github.com/cocoapods/specs.git:
     - Google-Mobile-Ads-SDK
+    - GoogleAppMeasurement
+    - GoogleUtilities
     - mopub-ios-sdk
+    - nanopb
     - SpotX-Brightcove-Plugin
     - SpotX-GMA-Plugin
     - SpotX-MoPub-Plugin
@@ -48,13 +79,16 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Brightcove-Player-Core: 2984d9852c0cffad76949e95172db22c20380266
-  Google-Mobile-Ads-SDK: d028682d7450749a1955679da050eaf70d997b3e
+  Google-Mobile-Ads-SDK: 30a1520469efa03097af62ea0d8f9be773542267
+  GoogleAppMeasurement: 1624046ab1bcc5e170061a56ef5679000b079c8e
+  GoogleUtilities: 6481e6318c5fcabaaa8513ef8120f329055d7c10
   mopub-ios-sdk: 6220599bacc1c47f4117b7af5e9616f6779157a5
+  nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   SpotX-Brightcove-Plugin: 9e1f93ed1ec17eb1db7cffabbcaa7af2aaeb9309
   SpotX-GMA-Plugin: 224bf49270d9c52e2481af8e7bc074213b067ac6
   SpotX-MoPub-Plugin: 86fa9909bd320f345e40fa6e79721e236cda0a4d
-  SpotX-SDK: 58c7452b0aea7204b78228f0192837af0075e4fb
-  SpotX-SDK-MOAT: 158170163e9d864deb2f3c5c8e269f7a43a599b6
+  SpotX-SDK: f83d55e3393f7eabd1ca654bffccccec2b2cb4da
+  SpotX-SDK-MOAT: 50be16451b4a9f3827c5f8e675f724d2d1c454e5
 
 PODFILE CHECKSUM: 7be23dbc0a58f074ed67bc1d81d2e44a40382b56
 
